@@ -1,0 +1,11 @@
+C:\Huella\proyectoHuellaDactilar\ControlEntrada\ControlEntrada\bin\Debug\ControlEntrada.exe.config
+C:\Huella\proyectoHuellaDactilar\ControlEntrada\ControlEntrada\bin\Debug\ControlEntrada.exe
+C:\Huella\proyectoHuellaDactilar\ControlEntrada\ControlEntrada\bin\Debug\ControlEntrada.pdb
+C:\Huella\proyectoHuellaDactilar\ControlEntrada\ControlEntrada\obj\Debug\ControlEntrada.csproj.AssemblyReference.cache
+C:\Huella\proyectoHuellaDactilar\ControlEntrada\ControlEntrada\obj\Debug\ControlEntrada.csproj.SuggestedBindingRedirects.cache
+C:\Huella\proyectoHuellaDactilar\ControlEntrada\ControlEntrada\obj\Debug\ControlEntrada.Login.resources
+C:\Huella\proyectoHuellaDactilar\ControlEntrada\ControlEntrada\obj\Debug\ControlEntrada.Properties.Resources.resources
+C:\Huella\proyectoHuellaDactilar\ControlEntrada\ControlEntrada\obj\Debug\ControlEntrada.csproj.GenerateResource.cache
+C:\Huella\proyectoHuellaDactilar\ControlEntrada\ControlEntrada\obj\Debug\ControlEntrada.csproj.CoreCompileInputs.cache
+C:\Huella\proyectoHuellaDactilar\ControlEntrada\ControlEntrada\obj\Debug\ControlEntrada.exe
+C:\Huella\proyectoHuellaDactilar\ControlEntrada\ControlEntrada\obj\Debug\ControlEntrada.pdb
