@@ -16,5 +16,10 @@ namespace ControlEntrada
         {
             InitializeComponent();
         }
+
+        private void salirLogin_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

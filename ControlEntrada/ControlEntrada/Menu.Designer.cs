@@ -38,6 +38,7 @@
             this.btnRegEntradaSalida = new System.Windows.Forms.Button();
             this.btnReportes = new System.Windows.Forms.Button();
             this.btnAcercaDe = new System.Windows.Forms.Button();
+            this.cerrar = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -45,6 +46,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(169)))), ((int)(((byte)(0)))));
+            this.panel1.Controls.Add(this.cerrar);
             this.panel1.Controls.Add(this.labelMenu);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -169,6 +171,19 @@
             this.btnAcercaDe.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnAcercaDe.UseVisualStyleBackColor = false;
             // 
+            // cerrar
+            // 
+            this.cerrar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("cerrar.BackgroundImage")));
+            this.cerrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.cerrar.FlatAppearance.BorderSize = 0;
+            this.cerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cerrar.Location = new System.Drawing.Point(663, 1);
+            this.cerrar.Name = "cerrar";
+            this.cerrar.Size = new System.Drawing.Size(42, 39);
+            this.cerrar.TabIndex = 8;
+            this.cerrar.UseVisualStyleBackColor = true;
+            this.cerrar.Click += new System.EventHandler(this.cerrar_Click);
+            // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -186,7 +201,6 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Menu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.WindowState = System.Windows.Forms.FormWindowState.Minimized;
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -206,5 +220,6 @@
         private System.Windows.Forms.Button btnRegEntradaSalida;
         private System.Windows.Forms.Button btnReportes;
         private System.Windows.Forms.Button btnAcercaDe;
+        private System.Windows.Forms.Button cerrar;
     }
 }

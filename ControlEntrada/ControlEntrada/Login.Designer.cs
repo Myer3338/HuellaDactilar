@@ -125,6 +125,7 @@
             this.salirLogin.TabIndex = 7;
             this.salirLogin.Text = "Salir";
             this.salirLogin.UseVisualStyleBackColor = true;
+            this.salirLogin.Click += new System.EventHandler(this.salirLogin_Click);
             // 
             // contenedorLogin
             // 
