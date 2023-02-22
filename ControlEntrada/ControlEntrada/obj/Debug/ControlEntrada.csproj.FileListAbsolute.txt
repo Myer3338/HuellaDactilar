@@ -9,3 +9,9 @@ C:\Huella\proyectoHuellaDactilar\ControlEntrada\ControlEntrada\obj\Debug\Control
 C:\Huella\proyectoHuellaDactilar\ControlEntrada\ControlEntrada\obj\Debug\ControlEntrada.csproj.CoreCompileInputs.cache
 C:\Huella\proyectoHuellaDactilar\ControlEntrada\ControlEntrada\obj\Debug\ControlEntrada.exe
 C:\Huella\proyectoHuellaDactilar\ControlEntrada\ControlEntrada\obj\Debug\ControlEntrada.pdb
+C:\Huella\proyectoHuellaDactilar\ControlEntrada\ControlEntrada\obj\Debug\ControlEntrada.Menu.resources
+C:\Huella\proyectoHuellaDactilar\ControlEntrada\ControlEntrada\obj\Debug\ControlEntrada.ModuloAcercaDe.resources
+C:\Huella\proyectoHuellaDactilar\ControlEntrada\ControlEntrada\obj\Debug\ControlEntrada.ModuloEntradaSalida.resources
+C:\Huella\proyectoHuellaDactilar\ControlEntrada\ControlEntrada\obj\Debug\ControlEntrada.ModuloPersonas.resources
+C:\Huella\proyectoHuellaDactilar\ControlEntrada\ControlEntrada\obj\Debug\ControlEntrada.ModuloReportes.resources
+C:\Huella\proyectoHuellaDactilar\ControlEntrada\ControlEntrada\obj\Debug\ControlEntrada.ModuloUsuarios.resources

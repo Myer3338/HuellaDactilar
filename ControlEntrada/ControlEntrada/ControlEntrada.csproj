@@ -90,17 +90,26 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RegistroHuella.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="RegistroHuella.Designer.cs">
-      <DependentUpon>RegistroHuella.cs</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModuloAcercaDe.resx">
+      <DependentUpon>ModuloAcercaDe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModuloEntradaSalida.resx">
+      <DependentUpon>ModuloEntradaSalida.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModuloPersonas.resx">
+      <DependentUpon>ModuloPersonas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModuloReportes.resx">
+      <DependentUpon>ModuloReportes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModuloUsuarios.resx">
+      <DependentUpon>ModuloUsuarios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
