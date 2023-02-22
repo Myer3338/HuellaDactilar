@@ -157,7 +157,6 @@
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
-            this.WindowState = System.Windows.Forms.FormWindowState.Minimized;
             this.contenedorLogin.ResumeLayout(false);
             this.contenedorLogin.PerformLayout();
             this.ResumeLayout(false);
