@@ -15,3 +15,8 @@ C:\Huella\proyectoHuellaDactilar\ControlEntrada\ControlEntrada\obj\Debug\Control
 C:\Huella\proyectoHuellaDactilar\ControlEntrada\ControlEntrada\obj\Debug\ControlEntrada.exe
 C:\Huella\proyectoHuellaDactilar\ControlEntrada\ControlEntrada\obj\Debug\ControlEntrada.pdb
 C:\Huella\proyectoHuellaDactilar\ControlEntrada\ControlEntrada\bin\Debug\ControlEntrada.pdb
+C:\Huella\proyectoHuellaDactilar\ControlEntrada\ControlEntrada\bin\Debug\Logica.dll
+C:\Huella\proyectoHuellaDactilar\ControlEntrada\ControlEntrada\bin\Debug\Logica.pdb
+C:\Huella\proyectoHuellaDactilar\ControlEntrada\ControlEntrada\obj\Debug\ControlEntrada.csproj.CopyComplete
+C:\Huella\proyectoHuellaDactilar\ControlEntrada\ControlEntrada\bin\Debug\Datos.dll
+C:\Huella\proyectoHuellaDactilar\ControlEntrada\ControlEntrada\bin\Debug\Datos.pdb

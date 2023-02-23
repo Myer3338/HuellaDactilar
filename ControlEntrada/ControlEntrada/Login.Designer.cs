@@ -43,13 +43,13 @@
             // Registro
             // 
             this.Registro.AutoSize = true;
-            this.Registro.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Registro.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Registro.ForeColor = System.Drawing.Color.White;
-            this.Registro.Location = new System.Drawing.Point(81, 38);
+            this.Registro.Location = new System.Drawing.Point(72, 30);
             this.Registro.Name = "Registro";
-            this.Registro.Size = new System.Drawing.Size(146, 40);
+            this.Registro.Size = new System.Drawing.Size(164, 44);
             this.Registro.TabIndex = 0;
-            this.Registro.Text = "       Registro \r\nEntrada y Salida ";
+            this.Registro.Text = "     Registros \r\nEntrada y Salida ";
             // 
             // version
             // 
@@ -65,11 +65,11 @@
             // usuarioLogin
             // 
             this.usuarioLogin.AutoSize = true;
-            this.usuarioLogin.Font = new System.Drawing.Font("Microsoft JhengHei UI Light", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.usuarioLogin.Font = new System.Drawing.Font("Microsoft JhengHei UI Light", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.usuarioLogin.ForeColor = System.Drawing.Color.White;
-            this.usuarioLogin.Location = new System.Drawing.Point(78, 34);
+            this.usuarioLogin.Location = new System.Drawing.Point(73, 32);
             this.usuarioLogin.Name = "usuarioLogin";
-            this.usuarioLogin.Size = new System.Drawing.Size(63, 18);
+            this.usuarioLogin.Size = new System.Drawing.Size(72, 20);
             this.usuarioLogin.TabIndex = 2;
             this.usuarioLogin.Text = "Usuario";
             // 
@@ -83,11 +83,11 @@
             // ContrasenaLogin
             // 
             this.ContrasenaLogin.AutoSize = true;
-            this.ContrasenaLogin.Font = new System.Drawing.Font("Microsoft JhengHei UI Light", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ContrasenaLogin.Font = new System.Drawing.Font("Microsoft JhengHei UI Light", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ContrasenaLogin.ForeColor = System.Drawing.Color.White;
-            this.ContrasenaLogin.Location = new System.Drawing.Point(64, 127);
+            this.ContrasenaLogin.Location = new System.Drawing.Point(58, 126);
             this.ContrasenaLogin.Name = "ContrasenaLogin";
-            this.ContrasenaLogin.Size = new System.Drawing.Size(90, 18);
+            this.ContrasenaLogin.Size = new System.Drawing.Size(103, 20);
             this.ContrasenaLogin.TabIndex = 4;
             this.ContrasenaLogin.Text = "Contraseña";
             // 
@@ -111,6 +111,7 @@
             this.entrarLogin.TabIndex = 6;
             this.entrarLogin.Text = "Entrar";
             this.entrarLogin.UseVisualStyleBackColor = true;
+            this.entrarLogin.Click += new System.EventHandler(this.entrarLogin_Click);
             // 
             // salirLogin
             // 

@@ -137,5 +137,11 @@
   <ItemGroup>
     <None Include="Resources\LogoSena.png" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Logica\Logica.csproj">
+      <Project>{8e22769f-0234-4aa4-9667-c16dca9a4f12}</Project>
+      <Name>Logica</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

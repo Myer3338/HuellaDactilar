@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Logica;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -20,6 +21,11 @@ namespace ControlEntrada
         private void salirLogin_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void entrarLogin_Click(object sender, EventArgs e)
+        {
+            //General.VerificarConexion();
         }
     }
 }

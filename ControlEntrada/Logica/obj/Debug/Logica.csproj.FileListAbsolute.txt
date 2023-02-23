@@ -1,0 +1,9 @@
+C:\Huella\proyectoHuellaDactilar\ControlEntrada\Logica\bin\Debug\Logica.dll
+C:\Huella\proyectoHuellaDactilar\ControlEntrada\Logica\bin\Debug\Logica.pdb
+C:\Huella\proyectoHuellaDactilar\ControlEntrada\Logica\obj\Debug\Logica.csproj.AssemblyReference.cache
+C:\Huella\proyectoHuellaDactilar\ControlEntrada\Logica\obj\Debug\Logica.csproj.CoreCompileInputs.cache
+C:\Huella\proyectoHuellaDactilar\ControlEntrada\Logica\obj\Debug\Logica.dll
+C:\Huella\proyectoHuellaDactilar\ControlEntrada\Logica\obj\Debug\Logica.pdb
+C:\Huella\proyectoHuellaDactilar\ControlEntrada\Logica\bin\Debug\Datos.dll
+C:\Huella\proyectoHuellaDactilar\ControlEntrada\Logica\bin\Debug\Datos.pdb
+C:\Huella\proyectoHuellaDactilar\ControlEntrada\Logica\obj\Debug\Logica.csproj.CopyComplete

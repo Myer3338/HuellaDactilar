@@ -1,0 +1,6 @@
+C:\Huella\proyectoHuellaDactilar\ControlEntrada\Datos\bin\Debug\Datos.dll
+C:\Huella\proyectoHuellaDactilar\ControlEntrada\Datos\bin\Debug\Datos.pdb
+C:\Huella\proyectoHuellaDactilar\ControlEntrada\Datos\obj\Debug\Datos.csproj.AssemblyReference.cache
+C:\Huella\proyectoHuellaDactilar\ControlEntrada\Datos\obj\Debug\Datos.csproj.CoreCompileInputs.cache
+C:\Huella\proyectoHuellaDactilar\ControlEntrada\Datos\obj\Debug\Datos.dll
+C:\Huella\proyectoHuellaDactilar\ControlEntrada\Datos\obj\Debug\Datos.pdb

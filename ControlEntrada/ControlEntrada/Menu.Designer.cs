@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Menu));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.cerrar = new System.Windows.Forms.Button();
             this.labelMenu = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.labelMenu2 = new System.Windows.Forms.Label();
@@ -38,7 +39,6 @@
             this.btnRegEntradaSalida = new System.Windows.Forms.Button();
             this.btnReportes = new System.Windows.Forms.Button();
             this.btnAcercaDe = new System.Windows.Forms.Button();
-            this.cerrar = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -54,21 +54,36 @@
             this.panel1.Size = new System.Drawing.Size(705, 39);
             this.panel1.TabIndex = 0;
             // 
+            // cerrar
+            // 
+            this.cerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.cerrar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("cerrar.BackgroundImage")));
+            this.cerrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.cerrar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cerrar.FlatAppearance.BorderSize = 0;
+            this.cerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cerrar.Location = new System.Drawing.Point(663, 0);
+            this.cerrar.Name = "cerrar";
+            this.cerrar.Size = new System.Drawing.Size(42, 39);
+            this.cerrar.TabIndex = 8;
+            this.cerrar.UseVisualStyleBackColor = true;
+            this.cerrar.Click += new System.EventHandler(this.cerrar_Click);
+            // 
             // labelMenu
             // 
             this.labelMenu.AutoSize = true;
-            this.labelMenu.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelMenu.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelMenu.ForeColor = System.Drawing.Color.White;
-            this.labelMenu.Location = new System.Drawing.Point(12, 9);
+            this.labelMenu.Location = new System.Drawing.Point(6, 7);
             this.labelMenu.Name = "labelMenu";
-            this.labelMenu.Size = new System.Drawing.Size(254, 22);
+            this.labelMenu.Size = new System.Drawing.Size(261, 24);
             this.labelMenu.TabIndex = 0;
             this.labelMenu.Text = "Control de Entrada - Salida";
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(12, 61);
+            this.pictureBox1.Location = new System.Drawing.Point(17, 61);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(166, 172);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -80,7 +95,7 @@
             this.labelMenu2.AutoSize = true;
             this.labelMenu2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelMenu2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(169)))), ((int)(((byte)(0)))));
-            this.labelMenu2.Location = new System.Drawing.Point(184, 110);
+            this.labelMenu2.Location = new System.Drawing.Point(189, 110);
             this.labelMenu2.Name = "labelMenu2";
             this.labelMenu2.Size = new System.Drawing.Size(498, 26);
             this.labelMenu2.TabIndex = 2;
@@ -170,19 +185,6 @@
             this.btnAcercaDe.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnAcercaDe.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnAcercaDe.UseVisualStyleBackColor = false;
-            // 
-            // cerrar
-            // 
-            this.cerrar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("cerrar.BackgroundImage")));
-            this.cerrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.cerrar.FlatAppearance.BorderSize = 0;
-            this.cerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cerrar.Location = new System.Drawing.Point(663, 1);
-            this.cerrar.Name = "cerrar";
-            this.cerrar.Size = new System.Drawing.Size(42, 39);
-            this.cerrar.TabIndex = 8;
-            this.cerrar.UseVisualStyleBackColor = true;
-            this.cerrar.Click += new System.EventHandler(this.cerrar_Click);
             // 
             // Menu
             // 
