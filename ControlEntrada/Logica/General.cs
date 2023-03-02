@@ -12,20 +12,20 @@ namespace Logica
     {//SqlConexion, se utiliza para conectarnos a la base de datos
         public static SqlConnection conexion = new SqlConnection(Datos.ConexionBD.cadenaconexion);
 
-        public static void VerificarConexion()
-        { try 
-            { 
-                conexion.Open();
-                MessageBox.Show("Conexion Valida", "Felicitaciones");
-            } 
-            catch (Exception e) 
-            {
-                MessageBox.Show("Conexion Invalida" + e.Message.ToString(), "Error");
-            }
-            finally
-            { 
-                conexion.Close(); 
-            }
-        }
+        //public static void VerificarConexion()
+        //{ try 
+        //    { 
+        //        conexion.Open();
+        //        MessageBox.Show("Conexion Valida", "Felicitaciones");
+        //    } 
+        //    catch (Exception e) 
+        //    {
+        //        MessageBox.Show("Conexion Invalida" + e.Message.ToString(), "Error");
+        //    }
+        //    finally
+        //    { 
+        //        conexion.Close(); 
+        //    }
+        //}
     }
 }

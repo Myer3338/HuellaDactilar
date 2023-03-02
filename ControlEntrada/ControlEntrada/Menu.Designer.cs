@@ -32,15 +32,14 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.cerrar = new System.Windows.Forms.Button();
             this.labelMenu = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.AcercaDe = new System.Windows.Forms.PictureBox();
             this.labelMenu2 = new System.Windows.Forms.Label();
             this.btnUsuariosSistema = new System.Windows.Forms.Button();
             this.btnRegistroPersona = new System.Windows.Forms.Button();
             this.btnRegEntradaSalida = new System.Windows.Forms.Button();
             this.btnReportes = new System.Windows.Forms.Button();
-            this.btnAcercaDe = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AcercaDe)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -80,22 +79,22 @@
             this.labelMenu.TabIndex = 0;
             this.labelMenu.Text = "Control de Entrada - Salida";
             // 
-            // pictureBox1
+            // AcercaDe
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(17, 61);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(166, 172);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
+            this.AcercaDe.Image = ((System.Drawing.Image)(resources.GetObject("AcercaDe.Image")));
+            this.AcercaDe.Location = new System.Drawing.Point(17, 61);
+            this.AcercaDe.Name = "AcercaDe";
+            this.AcercaDe.Size = new System.Drawing.Size(166, 172);
+            this.AcercaDe.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.AcercaDe.TabIndex = 1;
+            this.AcercaDe.TabStop = false;
             // 
             // labelMenu2
             // 
             this.labelMenu2.AutoSize = true;
             this.labelMenu2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelMenu2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(169)))), ((int)(((byte)(0)))));
-            this.labelMenu2.Location = new System.Drawing.Point(189, 110);
+            this.labelMenu2.Location = new System.Drawing.Point(189, 134);
             this.labelMenu2.Name = "labelMenu2";
             this.labelMenu2.Size = new System.Drawing.Size(498, 26);
             this.labelMenu2.TabIndex = 2;
@@ -109,7 +108,7 @@
             this.btnUsuariosSistema.FlatAppearance.BorderSize = 0;
             this.btnUsuariosSistema.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUsuariosSistema.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUsuariosSistema.Location = new System.Drawing.Point(208, 193);
+            this.btnUsuariosSistema.Location = new System.Drawing.Point(52, 300);
             this.btnUsuariosSistema.Name = "btnUsuariosSistema";
             this.btnUsuariosSistema.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.btnUsuariosSistema.Size = new System.Drawing.Size(111, 136);
@@ -126,7 +125,7 @@
             this.btnRegistroPersona.FlatAppearance.BorderSize = 0;
             this.btnRegistroPersona.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRegistroPersona.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRegistroPersona.Location = new System.Drawing.Point(355, 173);
+            this.btnRegistroPersona.Location = new System.Drawing.Point(196, 280);
             this.btnRegistroPersona.Name = "btnRegistroPersona";
             this.btnRegistroPersona.Size = new System.Drawing.Size(130, 156);
             this.btnRegistroPersona.TabIndex = 4;
@@ -143,7 +142,7 @@
             this.btnRegEntradaSalida.FlatAppearance.BorderSize = 0;
             this.btnRegEntradaSalida.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRegEntradaSalida.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRegEntradaSalida.Location = new System.Drawing.Point(522, 163);
+            this.btnRegEntradaSalida.Location = new System.Drawing.Point(359, 270);
             this.btnRegEntradaSalida.Name = "btnRegEntradaSalida";
             this.btnRegEntradaSalida.Size = new System.Drawing.Size(130, 166);
             this.btnRegEntradaSalida.TabIndex = 5;
@@ -160,7 +159,7 @@
             this.btnReportes.FlatAppearance.BorderSize = 0;
             this.btnReportes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnReportes.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReportes.Location = new System.Drawing.Point(264, 346);
+            this.btnReportes.Location = new System.Drawing.Point(522, 304);
             this.btnReportes.Name = "btnReportes";
             this.btnReportes.Size = new System.Drawing.Size(130, 132);
             this.btnReportes.TabIndex = 6;
@@ -168,23 +167,6 @@
             this.btnReportes.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnReportes.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnReportes.UseVisualStyleBackColor = true;
-            // 
-            // btnAcercaDe
-            // 
-            this.btnAcercaDe.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAcercaDe.BackgroundImage")));
-            this.btnAcercaDe.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnAcercaDe.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAcercaDe.FlatAppearance.BorderSize = 0;
-            this.btnAcercaDe.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAcercaDe.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAcercaDe.Location = new System.Drawing.Point(449, 346);
-            this.btnAcercaDe.Name = "btnAcercaDe";
-            this.btnAcercaDe.Size = new System.Drawing.Size(130, 132);
-            this.btnAcercaDe.TabIndex = 7;
-            this.btnAcercaDe.Text = "Acerca de";
-            this.btnAcercaDe.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnAcercaDe.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.btnAcercaDe.UseVisualStyleBackColor = false;
             // 
             // Menu
             // 
@@ -197,15 +179,14 @@
             this.Controls.Add(this.btnRegEntradaSalida);
             this.Controls.Add(this.btnRegistroPersona);
             this.Controls.Add(this.labelMenu2);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.AcercaDe);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.btnAcercaDe);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Menu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AcercaDe)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -215,13 +196,12 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label labelMenu;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox AcercaDe;
         private System.Windows.Forms.Label labelMenu2;
         private System.Windows.Forms.Button btnUsuariosSistema;
         private System.Windows.Forms.Button btnRegistroPersona;
         private System.Windows.Forms.Button btnRegEntradaSalida;
         private System.Windows.Forms.Button btnReportes;
-        private System.Windows.Forms.Button btnAcercaDe;
         private System.Windows.Forms.Button cerrar;
     }
 }
