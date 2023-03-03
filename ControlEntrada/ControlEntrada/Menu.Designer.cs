@@ -38,8 +38,10 @@
             this.btnRegistroPersona = new System.Windows.Forms.Button();
             this.btnRegEntradaSalida = new System.Windows.Forms.Button();
             this.btnReportes = new System.Windows.Forms.Button();
+            this.panel = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.AcercaDe)).BeginInit();
+            this.panel.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -81,6 +83,7 @@
             // 
             // AcercaDe
             // 
+            this.AcercaDe.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.AcercaDe.Image = ((System.Drawing.Image)(resources.GetObject("AcercaDe.Image")));
             this.AcercaDe.Location = new System.Drawing.Point(17, 61);
             this.AcercaDe.Name = "AcercaDe";
@@ -91,6 +94,7 @@
             // 
             // labelMenu2
             // 
+            this.labelMenu2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelMenu2.AutoSize = true;
             this.labelMenu2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelMenu2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(169)))), ((int)(((byte)(0)))));
@@ -102,13 +106,14 @@
             // 
             // btnUsuariosSistema
             // 
+            this.btnUsuariosSistema.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnUsuariosSistema.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnUsuariosSistema.BackgroundImage")));
             this.btnUsuariosSistema.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnUsuariosSistema.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnUsuariosSistema.FlatAppearance.BorderSize = 0;
             this.btnUsuariosSistema.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUsuariosSistema.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUsuariosSistema.Location = new System.Drawing.Point(52, 300);
+            this.btnUsuariosSistema.Location = new System.Drawing.Point(37, 65);
             this.btnUsuariosSistema.Name = "btnUsuariosSistema";
             this.btnUsuariosSistema.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.btnUsuariosSistema.Size = new System.Drawing.Size(111, 136);
@@ -116,16 +121,18 @@
             this.btnUsuariosSistema.Text = "Usuarios del Sistema";
             this.btnUsuariosSistema.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnUsuariosSistema.UseVisualStyleBackColor = true;
+            this.btnUsuariosSistema.Click += new System.EventHandler(this.btnUsuariosSistema_Click);
             // 
             // btnRegistroPersona
             // 
+            this.btnRegistroPersona.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnRegistroPersona.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnRegistroPersona.BackgroundImage")));
             this.btnRegistroPersona.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnRegistroPersona.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnRegistroPersona.FlatAppearance.BorderSize = 0;
             this.btnRegistroPersona.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRegistroPersona.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRegistroPersona.Location = new System.Drawing.Point(196, 280);
+            this.btnRegistroPersona.Location = new System.Drawing.Point(181, 45);
             this.btnRegistroPersona.Name = "btnRegistroPersona";
             this.btnRegistroPersona.Size = new System.Drawing.Size(130, 156);
             this.btnRegistroPersona.TabIndex = 4;
@@ -136,13 +143,14 @@
             // 
             // btnRegEntradaSalida
             // 
+            this.btnRegEntradaSalida.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnRegEntradaSalida.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnRegEntradaSalida.BackgroundImage")));
             this.btnRegEntradaSalida.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnRegEntradaSalida.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnRegEntradaSalida.FlatAppearance.BorderSize = 0;
             this.btnRegEntradaSalida.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRegEntradaSalida.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRegEntradaSalida.Location = new System.Drawing.Point(359, 270);
+            this.btnRegEntradaSalida.Location = new System.Drawing.Point(344, 35);
             this.btnRegEntradaSalida.Name = "btnRegEntradaSalida";
             this.btnRegEntradaSalida.Size = new System.Drawing.Size(130, 166);
             this.btnRegEntradaSalida.TabIndex = 5;
@@ -153,13 +161,14 @@
             // 
             // btnReportes
             // 
+            this.btnReportes.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnReportes.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnReportes.BackgroundImage")));
             this.btnReportes.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnReportes.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnReportes.FlatAppearance.BorderSize = 0;
             this.btnReportes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnReportes.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReportes.Location = new System.Drawing.Point(522, 304);
+            this.btnReportes.Location = new System.Drawing.Point(507, 69);
             this.btnReportes.Name = "btnReportes";
             this.btnReportes.Size = new System.Drawing.Size(130, 132);
             this.btnReportes.TabIndex = 6;
@@ -168,25 +177,36 @@
             this.btnReportes.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnReportes.UseVisualStyleBackColor = true;
             // 
+            // panel
+            // 
+            this.panel.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panel.Controls.Add(this.btnRegistroPersona);
+            this.panel.Controls.Add(this.btnUsuariosSistema);
+            this.panel.Controls.Add(this.btnRegEntradaSalida);
+            this.panel.Controls.Add(this.btnReportes);
+            this.panel.Location = new System.Drawing.Point(17, 239);
+            this.panel.Name = "panel";
+            this.panel.Size = new System.Drawing.Size(670, 255);
+            this.panel.TabIndex = 7;
+            // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(705, 506);
-            this.Controls.Add(this.btnUsuariosSistema);
-            this.Controls.Add(this.btnReportes);
-            this.Controls.Add(this.btnRegEntradaSalida);
-            this.Controls.Add(this.btnRegistroPersona);
+            this.Controls.Add(this.panel);
             this.Controls.Add(this.labelMenu2);
             this.Controls.Add(this.AcercaDe);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Menu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.AcercaDe)).EndInit();
+            this.panel.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -203,5 +223,6 @@
         private System.Windows.Forms.Button btnRegEntradaSalida;
         private System.Windows.Forms.Button btnReportes;
         private System.Windows.Forms.Button cerrar;
+        private System.Windows.Forms.Panel panel;
     }
 }

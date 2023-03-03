@@ -27,5 +27,17 @@ namespace ControlEntrada
                 }
             }
         }
+
+        private void btnUsuariosSistema_Click(object sender, EventArgs e)
+        {
+            ModuloUsuarios usuarios = new ModuloUsuarios();
+            usuarios.ShowDialog();
+        }
+
+        private void Menu_Resize(object sender, EventArgs e)
+        {
+            panel.Left = (Width - panel.Width) / 2;
+            panel.Top = (Width - panel.Height) / 2;
+        }
     }
 }
