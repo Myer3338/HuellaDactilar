@@ -53,6 +53,15 @@ namespace ControlEntrada
             this.BBuscar.Enabled = true;
             this.BTodosRegistros.Enabled = true;
             this.groupBox2.Enabled = false;
+            this.MovePreviousItem.Enabled = true;
+            this.MoveFirstItem.Enabled = true;
+            this.MovePreviousItem.Enabled = true;
+            this.bindingNavigatorPositionItem.Enabled = true;
+            this.bindingNavigatorCountItem.Enabled = true;
+            this.MoveNextItem.Enabled = true;
+            this.MoveLastItem.Enabled = true;
+
+
         }
 
         private void BEditar_Click(object sender, EventArgs e)

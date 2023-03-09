@@ -36,13 +36,13 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.UsuariosNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
-            this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
+            this.MoveFirstItem = new System.Windows.Forms.ToolStripButton();
+            this.MovePreviousItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
             this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
+            this.MoveNextItem = new System.Windows.Forms.ToolStripButton();
+            this.MoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.BNuevo = new System.Windows.Forms.ToolStripButton();
             this.BGuardar = new System.Windows.Forms.ToolStripButton();
@@ -55,13 +55,13 @@
             this.BBuscar = new System.Windows.Forms.ToolStripButton();
             this.BTodosRegistros = new System.Windows.Forms.ToolStripButton();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.comboBoxRol = new System.Windows.Forms.ComboBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.rolComboBox = new System.Windows.Forms.ComboBox();
+            this.contrasenaTextEdit = new System.Windows.Forms.TextBox();
+            this.id_UsuarioTextBox = new System.Windows.Forms.TextBox();
+            this.usuarioTtextBox = new System.Windows.Forms.TextBox();
+            this.correoTextBox = new System.Windows.Forms.TextBox();
+            this.nombreTextEdit = new System.Windows.Forms.TextBox();
+            this.cedulaTextBox = new System.Windows.Forms.TextBox();
             this.labelContraseña = new System.Windows.Forms.Label();
             this.labelIDUsuario = new System.Windows.Forms.Label();
             this.labelRol = new System.Windows.Forms.Label();
@@ -71,14 +71,16 @@
             this.labelDocumento = new System.Windows.Forms.Label();
             this.BEliminarFoto = new System.Windows.Forms.Button();
             this.BFoto = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.fotoPictureBox = new System.Windows.Forms.PictureBox();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.UsuariosbindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.UsuariosNavigator)).BeginInit();
             this.UsuariosNavigator.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fotoPictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.UsuariosbindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -134,14 +136,14 @@
             this.UsuariosNavigator.CountItem = this.bindingNavigatorCountItem;
             this.UsuariosNavigator.DeleteItem = null;
             this.UsuariosNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.bindingNavigatorMoveFirstItem,
-            this.bindingNavigatorMovePreviousItem,
+            this.MoveFirstItem,
+            this.MovePreviousItem,
             this.bindingNavigatorSeparator,
             this.bindingNavigatorPositionItem,
             this.bindingNavigatorCountItem,
             this.bindingNavigatorSeparator1,
-            this.bindingNavigatorMoveNextItem,
-            this.bindingNavigatorMoveLastItem,
+            this.MoveNextItem,
+            this.MoveLastItem,
             this.bindingNavigatorSeparator2,
             this.BNuevo,
             this.BGuardar,
@@ -154,10 +156,10 @@
             this.BBuscar,
             this.BTodosRegistros});
             this.UsuariosNavigator.Location = new System.Drawing.Point(3, 16);
-            this.UsuariosNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
-            this.UsuariosNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
-            this.UsuariosNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
-            this.UsuariosNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
+            this.UsuariosNavigator.MoveFirstItem = this.MoveFirstItem;
+            this.UsuariosNavigator.MoveLastItem = this.MoveLastItem;
+            this.UsuariosNavigator.MoveNextItem = this.MoveNextItem;
+            this.UsuariosNavigator.MovePreviousItem = this.MovePreviousItem;
             this.UsuariosNavigator.Name = "UsuariosNavigator";
             this.UsuariosNavigator.PositionItem = this.bindingNavigatorPositionItem;
             this.UsuariosNavigator.Size = new System.Drawing.Size(876, 25);
@@ -171,23 +173,23 @@
             this.bindingNavigatorCountItem.Text = "de {0}";
             this.bindingNavigatorCountItem.ToolTipText = "Número total de elementos";
             // 
-            // bindingNavigatorMoveFirstItem
+            // MoveFirstItem
             // 
-            this.bindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
-            this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
-            this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorMoveFirstItem.Text = "Mover primero";
+            this.MoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.MoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("MoveFirstItem.Image")));
+            this.MoveFirstItem.Name = "MoveFirstItem";
+            this.MoveFirstItem.RightToLeftAutoMirrorImage = true;
+            this.MoveFirstItem.Size = new System.Drawing.Size(23, 22);
+            this.MoveFirstItem.Text = "Mover primero";
             // 
-            // bindingNavigatorMovePreviousItem
+            // MovePreviousItem
             // 
-            this.bindingNavigatorMovePreviousItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
-            this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
-            this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorMovePreviousItem.Text = "Mover anterior";
+            this.MovePreviousItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.MovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("MovePreviousItem.Image")));
+            this.MovePreviousItem.Name = "MovePreviousItem";
+            this.MovePreviousItem.RightToLeftAutoMirrorImage = true;
+            this.MovePreviousItem.Size = new System.Drawing.Size(23, 22);
+            this.MovePreviousItem.Text = "Mover anterior";
             // 
             // bindingNavigatorSeparator
             // 
@@ -209,23 +211,23 @@
             this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
             this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 25);
             // 
-            // bindingNavigatorMoveNextItem
+            // MoveNextItem
             // 
-            this.bindingNavigatorMoveNextItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
-            this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
-            this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorMoveNextItem.Text = "Mover siguiente";
+            this.MoveNextItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.MoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("MoveNextItem.Image")));
+            this.MoveNextItem.Name = "MoveNextItem";
+            this.MoveNextItem.RightToLeftAutoMirrorImage = true;
+            this.MoveNextItem.Size = new System.Drawing.Size(23, 22);
+            this.MoveNextItem.Text = "Mover siguiente";
             // 
-            // bindingNavigatorMoveLastItem
+            // MoveLastItem
             // 
-            this.bindingNavigatorMoveLastItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
-            this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
-            this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorMoveLastItem.Text = "Mover último";
+            this.MoveLastItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.MoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("MoveLastItem.Image")));
+            this.MoveLastItem.Name = "MoveLastItem";
+            this.MoveLastItem.RightToLeftAutoMirrorImage = true;
+            this.MoveLastItem.Size = new System.Drawing.Size(23, 22);
+            this.MoveLastItem.Text = "Mover último";
             // 
             // bindingNavigatorSeparator2
             // 
@@ -325,13 +327,13 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.comboBoxRol);
-            this.groupBox2.Controls.Add(this.textBox7);
-            this.groupBox2.Controls.Add(this.textBox6);
-            this.groupBox2.Controls.Add(this.textBox4);
-            this.groupBox2.Controls.Add(this.textBox3);
-            this.groupBox2.Controls.Add(this.textBox2);
-            this.groupBox2.Controls.Add(this.textBox1);
+            this.groupBox2.Controls.Add(this.rolComboBox);
+            this.groupBox2.Controls.Add(this.contrasenaTextEdit);
+            this.groupBox2.Controls.Add(this.id_UsuarioTextBox);
+            this.groupBox2.Controls.Add(this.usuarioTtextBox);
+            this.groupBox2.Controls.Add(this.correoTextBox);
+            this.groupBox2.Controls.Add(this.nombreTextEdit);
+            this.groupBox2.Controls.Add(this.cedulaTextBox);
             this.groupBox2.Controls.Add(this.labelContraseña);
             this.groupBox2.Controls.Add(this.labelIDUsuario);
             this.groupBox2.Controls.Add(this.labelRol);
@@ -341,7 +343,7 @@
             this.groupBox2.Controls.Add(this.labelDocumento);
             this.groupBox2.Controls.Add(this.BEliminarFoto);
             this.groupBox2.Controls.Add(this.BFoto);
-            this.groupBox2.Controls.Add(this.pictureBox1);
+            this.groupBox2.Controls.Add(this.fotoPictureBox);
             this.groupBox2.Enabled = false;
             this.groupBox2.Location = new System.Drawing.Point(55, 56);
             this.groupBox2.Name = "groupBox2";
@@ -349,57 +351,57 @@
             this.groupBox2.TabIndex = 10;
             this.groupBox2.TabStop = false;
             // 
-            // comboBoxRol
+            // rolComboBox
             // 
-            this.comboBoxRol.FormattingEnabled = true;
-            this.comboBoxRol.Location = new System.Drawing.Point(638, 160);
-            this.comboBoxRol.Name = "comboBoxRol";
-            this.comboBoxRol.Size = new System.Drawing.Size(100, 21);
-            this.comboBoxRol.TabIndex = 17;
-            this.comboBoxRol.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBoxRol_KeyPress);
+            this.rolComboBox.FormattingEnabled = true;
+            this.rolComboBox.Location = new System.Drawing.Point(638, 160);
+            this.rolComboBox.Name = "rolComboBox";
+            this.rolComboBox.Size = new System.Drawing.Size(100, 21);
+            this.rolComboBox.TabIndex = 17;
+            this.rolComboBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBoxRol_KeyPress);
             // 
-            // textBox7
+            // contrasenaTextEdit
             // 
-            this.textBox7.Location = new System.Drawing.Point(444, 192);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(294, 20);
-            this.textBox7.TabIndex = 16;
+            this.contrasenaTextEdit.Location = new System.Drawing.Point(444, 192);
+            this.contrasenaTextEdit.Name = "contrasenaTextEdit";
+            this.contrasenaTextEdit.Size = new System.Drawing.Size(294, 20);
+            this.contrasenaTextEdit.TabIndex = 16;
             // 
-            // textBox6
+            // id_UsuarioTextBox
             // 
-            this.textBox6.Enabled = false;
-            this.textBox6.Location = new System.Drawing.Point(638, 13);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(100, 20);
-            this.textBox6.TabIndex = 15;
+            this.id_UsuarioTextBox.Enabled = false;
+            this.id_UsuarioTextBox.Location = new System.Drawing.Point(638, 13);
+            this.id_UsuarioTextBox.Name = "id_UsuarioTextBox";
+            this.id_UsuarioTextBox.Size = new System.Drawing.Size(100, 20);
+            this.id_UsuarioTextBox.TabIndex = 15;
             // 
-            // textBox4
+            // usuarioTtextBox
             // 
-            this.textBox4.Location = new System.Drawing.Point(444, 160);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 20);
-            this.textBox4.TabIndex = 13;
+            this.usuarioTtextBox.Location = new System.Drawing.Point(444, 160);
+            this.usuarioTtextBox.Name = "usuarioTtextBox";
+            this.usuarioTtextBox.Size = new System.Drawing.Size(100, 20);
+            this.usuarioTtextBox.TabIndex = 13;
             // 
-            // textBox3
+            // correoTextBox
             // 
-            this.textBox3.Location = new System.Drawing.Point(444, 128);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 12;
+            this.correoTextBox.Location = new System.Drawing.Point(444, 128);
+            this.correoTextBox.Name = "correoTextBox";
+            this.correoTextBox.Size = new System.Drawing.Size(100, 20);
+            this.correoTextBox.TabIndex = 12;
             // 
-            // textBox2
+            // nombreTextEdit
             // 
-            this.textBox2.Location = new System.Drawing.Point(444, 96);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 11;
+            this.nombreTextEdit.Location = new System.Drawing.Point(444, 96);
+            this.nombreTextEdit.Name = "nombreTextEdit";
+            this.nombreTextEdit.Size = new System.Drawing.Size(100, 20);
+            this.nombreTextEdit.TabIndex = 11;
             // 
-            // textBox1
+            // cedulaTextBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(445, 64);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 10;
+            this.cedulaTextBox.Location = new System.Drawing.Point(445, 64);
+            this.cedulaTextBox.Name = "cedulaTextBox";
+            this.cedulaTextBox.Size = new System.Drawing.Size(100, 20);
+            this.cedulaTextBox.TabIndex = 10;
             // 
             // labelContraseña
             // 
@@ -488,14 +490,14 @@
             this.BFoto.TabIndex = 1;
             this.BFoto.UseVisualStyleBackColor = true;
             // 
-            // pictureBox1
+            // fotoPictureBox
             // 
-            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox1.Location = new System.Drawing.Point(151, 56);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(203, 179);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.fotoPictureBox.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.fotoPictureBox.Location = new System.Drawing.Point(151, 56);
+            this.fotoPictureBox.Name = "fotoPictureBox";
+            this.fotoPictureBox.Size = new System.Drawing.Size(203, 179);
+            this.fotoPictureBox.TabIndex = 0;
+            this.fotoPictureBox.TabStop = false;
             // 
             // ModuloUsuarios
             // 
@@ -522,7 +524,8 @@
             this.UsuariosNavigator.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fotoPictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.UsuariosbindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -530,37 +533,14 @@
         #endregion
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label labelMenu;
-        private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button cerrar;
         private System.Windows.Forms.ToolTip toolTip1;
-        private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.BindingNavigator UsuariosNavigator;
-        private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveFirstItem;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorMovePreviousItem;
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator;
-        private System.Windows.Forms.ToolStripTextBox bindingNavigatorPositionItem;
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator1;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveNextItem;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
-        private System.Windows.Forms.ToolStripButton BNuevo;
-        private System.Windows.Forms.ToolStripButton BGuardar;
-        private System.Windows.Forms.ToolStripButton BCancelar;
-        private System.Windows.Forms.ToolStripButton BEliminar;
-        private System.Windows.Forms.ToolStripButton BEditar;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
-        private System.Windows.Forms.ToolStripTextBox Buscar;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
-        private System.Windows.Forms.ToolStripButton BBuscar;
-        private System.Windows.Forms.ToolStripButton BTodosRegistros;
-        private System.Windows.Forms.ComboBox comboBoxRol;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label labelContraseña;
         private System.Windows.Forms.Label labelIDUsuario;
         private System.Windows.Forms.Label labelRol;
@@ -570,6 +550,30 @@
         private System.Windows.Forms.Label labelDocumento;
         private System.Windows.Forms.Button BEliminarFoto;
         private System.Windows.Forms.Button BFoto;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        public System.Windows.Forms.ToolStripButton MoveFirstItem;
+        public System.Windows.Forms.ToolStripButton MovePreviousItem;
+        public System.Windows.Forms.ToolStripButton MoveNextItem;
+        public System.Windows.Forms.ToolStripButton MoveLastItem;
+        public System.Windows.Forms.ToolStripButton BNuevo;
+        public System.Windows.Forms.ToolStripButton BGuardar;
+        public System.Windows.Forms.ToolStripButton BCancelar;
+        public System.Windows.Forms.ToolStripButton BEliminar;
+        public System.Windows.Forms.ToolStripButton BEditar;
+        public System.Windows.Forms.ToolStripTextBox Buscar;
+        public System.Windows.Forms.ToolStripButton BBuscar;
+        public System.Windows.Forms.ToolStripButton BTodosRegistros;
+        public System.Windows.Forms.ToolStripTextBox bindingNavigatorPositionItem;
+        public System.Windows.Forms.GroupBox groupBox1;
+        public System.Windows.Forms.GroupBox groupBox2;
+        public System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem;
+        public System.Windows.Forms.PictureBox fotoPictureBox;
+        public System.Windows.Forms.ComboBox rolComboBox;
+        public System.Windows.Forms.TextBox contrasenaTextEdit;
+        public System.Windows.Forms.TextBox usuarioTtextBox;
+        public System.Windows.Forms.TextBox correoTextBox;
+        public System.Windows.Forms.TextBox nombreTextEdit;
+        public System.Windows.Forms.TextBox cedulaTextBox;
+        public System.Windows.Forms.TextBox id_UsuarioTextBox;
+        public System.Windows.Forms.BindingSource UsuariosbindingSource;
     }
 }
