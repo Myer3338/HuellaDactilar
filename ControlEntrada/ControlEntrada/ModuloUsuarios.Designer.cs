@@ -276,6 +276,7 @@
             this.BEliminar.Name = "BEliminar";
             this.BEliminar.Size = new System.Drawing.Size(23, 22);
             this.BEliminar.Text = "Eliminar Registro";
+            this.BEliminar.Click += new System.EventHandler(this.BEliminar_Click);
             // 
             // BEditar
             // 
@@ -314,6 +315,7 @@
             this.BBuscar.Name = "BBuscar";
             this.BBuscar.Size = new System.Drawing.Size(23, 22);
             this.BBuscar.Text = "Buscar Registro";
+            this.BBuscar.Click += new System.EventHandler(this.BBuscar_Click);
             // 
             // BTodosRegistros
             // 
@@ -324,6 +326,7 @@
             this.BTodosRegistros.Name = "BTodosRegistros";
             this.BTodosRegistros.Size = new System.Drawing.Size(23, 22);
             this.BTodosRegistros.Text = "Ver Todos los Registros";
+            this.BTodosRegistros.Click += new System.EventHandler(this.BTodosRegistros_Click);
             // 
             // groupBox2
             // 
@@ -489,6 +492,7 @@
             this.BFoto.Size = new System.Drawing.Size(99, 77);
             this.BFoto.TabIndex = 1;
             this.BFoto.UseVisualStyleBackColor = true;
+            this.BFoto.Click += new System.EventHandler(this.BFoto_Click);
             // 
             // fotoPictureBox
             // 
@@ -515,6 +519,7 @@
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ModuloUsuarios";
+            this.Load += new System.EventHandler(this.ModuloUsuarios_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.groupBox1.ResumeLayout(false);
