@@ -74,6 +74,8 @@
             this.fotoPictureBox = new System.Windows.Forms.PictureBox();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.UsuariosbindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.UsuariosNavigator)).BeginInit();
@@ -81,6 +83,7 @@
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.fotoPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.UsuariosbindingSource)).BeginInit();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -330,15 +333,14 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.panel2);
             this.groupBox2.Controls.Add(this.rolComboBox);
             this.groupBox2.Controls.Add(this.contrasenaTextEdit);
-            this.groupBox2.Controls.Add(this.id_UsuarioTextBox);
             this.groupBox2.Controls.Add(this.usuarioTtextBox);
             this.groupBox2.Controls.Add(this.correoTextBox);
             this.groupBox2.Controls.Add(this.nombreTextEdit);
             this.groupBox2.Controls.Add(this.cedulaTextBox);
             this.groupBox2.Controls.Add(this.labelContraseña);
-            this.groupBox2.Controls.Add(this.labelIDUsuario);
             this.groupBox2.Controls.Add(this.labelRol);
             this.groupBox2.Controls.Add(this.labelUsuario);
             this.groupBox2.Controls.Add(this.labelCorreo);
@@ -357,6 +359,9 @@
             // rolComboBox
             // 
             this.rolComboBox.FormattingEnabled = true;
+            this.rolComboBox.Items.AddRange(new object[] {
+            "Administrador",
+            "Invitado"});
             this.rolComboBox.Location = new System.Drawing.Point(638, 160);
             this.rolComboBox.Name = "rolComboBox";
             this.rolComboBox.Size = new System.Drawing.Size(100, 21);
@@ -373,7 +378,7 @@
             // id_UsuarioTextBox
             // 
             this.id_UsuarioTextBox.Enabled = false;
-            this.id_UsuarioTextBox.Location = new System.Drawing.Point(638, 13);
+            this.id_UsuarioTextBox.Location = new System.Drawing.Point(83, -3);
             this.id_UsuarioTextBox.Name = "id_UsuarioTextBox";
             this.id_UsuarioTextBox.Size = new System.Drawing.Size(100, 20);
             this.id_UsuarioTextBox.TabIndex = 15;
@@ -418,7 +423,7 @@
             // labelIDUsuario
             // 
             this.labelIDUsuario.AutoSize = true;
-            this.labelIDUsuario.Location = new System.Drawing.Point(582, 16);
+            this.labelIDUsuario.Location = new System.Drawing.Point(27, 0);
             this.labelIDUsuario.Name = "labelIDUsuario";
             this.labelIDUsuario.Size = new System.Drawing.Size(58, 13);
             this.labelIDUsuario.TabIndex = 8;
@@ -480,6 +485,7 @@
             this.BEliminarFoto.Size = new System.Drawing.Size(99, 76);
             this.BEliminarFoto.TabIndex = 2;
             this.BEliminarFoto.UseVisualStyleBackColor = true;
+            this.BEliminarFoto.Click += new System.EventHandler(this.BEliminarFoto_Click);
             // 
             // BFoto
             // 
@@ -502,6 +508,19 @@
             this.fotoPictureBox.Size = new System.Drawing.Size(203, 179);
             this.fotoPictureBox.TabIndex = 0;
             this.fotoPictureBox.TabStop = false;
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.id_UsuarioTextBox);
+            this.panel2.Controls.Add(this.labelIDUsuario);
+            this.panel2.Location = new System.Drawing.Point(555, 16);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(23, 12);
+            this.panel2.TabIndex = 18;
             // 
             // ModuloUsuarios
             // 
@@ -531,6 +550,8 @@
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.fotoPictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.UsuariosbindingSource)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -580,5 +601,7 @@
         public System.Windows.Forms.TextBox cedulaTextBox;
         public System.Windows.Forms.TextBox id_UsuarioTextBox;
         public System.Windows.Forms.BindingSource UsuariosbindingSource;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.Panel panel2;
     }
 }

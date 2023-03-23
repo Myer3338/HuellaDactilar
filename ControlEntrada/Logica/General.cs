@@ -84,7 +84,7 @@ namespace Logica
                     General.consulta.Parameters.AddWithValue("@Nombre", Nombre);
                     General.consulta.Parameters.AddWithValue("@Correo", Correo);
                     General.consulta.Parameters.AddWithValue("@Usuario", Usuario);
-                    General.consulta.Parameters.AddWithValue("@Contraseña", Contraseña);
+                    General.consulta.Parameters.AddWithValue("@Contrasena", Contraseña);
                     General.consulta.Parameters.AddWithValue("@Rol", Rol);
                 }
                 consulta.ExecuteNonQuery();
@@ -93,7 +93,7 @@ namespace Logica
             catch (Exception e)
             {
                 mytransaction?.Rollback();
-                MessageBox.Show("No se puede realizar la operación"+ e.Message);                
+                MessageBox.Show("No se puede realizar la operación " + e.Message);                
             }
             finally 
             {

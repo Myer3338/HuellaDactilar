@@ -19,7 +19,7 @@ namespace ControlEntrada
         //
 
         public static string Id_usuario;
-        public static byte Foto_usuario;
+        public static byte[] Foto_usuario;
         public static string cedula_usuario;
         public static string Nombre_usuario;
         public static string correo_usuario;
@@ -76,7 +76,7 @@ namespace ControlEntrada
 
         public static void GuardarUsuario(ModuloUsuarios u)
         {
-            if (TipoCrud ==1) //insertar
+            if (TipoCrud == 1) //insertar
             {
                 General.InsertarActualizar("INSERT INTO Usuarios VALUES (@Foto, @Cedula, @Nombre, @Correo, @Usuario, @Contrasena, @Rol)",
                 imageToByteArray(u.fotoPictureBox.Image),

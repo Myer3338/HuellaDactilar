@@ -49,7 +49,10 @@ namespace ControlEntrada
             //copia de los datos
             //si decide cancelar la insercion            
             Globales.Id_usuario = this.id_UsuarioTextBox.Text;
-            Globales.Foto_usuario = Globales.imageToByteArray(this.fotoPictureBox.Image);
+            if (this.fotoPictureBox.Image != null)
+            {
+                Globales.Foto_usuario = Globales.imageToByteArray(this.fotoPictureBox.Image);
+            }            
             Globales.cedula_usuario = this.cedulaTextBox.Text;
             Globales.Nombre_usuario = this.nombreTextEdit.Text;
             Globales.correo_usuario = this.correoTextBox.Text;
@@ -228,9 +231,9 @@ namespace ControlEntrada
             if (this.openFileDialog1.ShowDialog() == DialogResult.OK)
             {
                 this.fotoPictureBox.Image = null;
-                this.fotoPictureBox.Load(openFileDialog.FileName);
+                this.fotoPictureBox.Load(openFileDialog1.FileName);
                 this.fotoPictureBox.Image =
-                    System.Drawing.Image.FromFile(openFileDialog.FileName);
+                    System.Drawing.Image.FromFile(openFileDialog1.FileName);
                 Bitmap imagen = new Bitmap(new Bitmap(fotoPictureBox.Image), 196, 240);
                 this.fotoPictureBox.Image = imagen;
             }
@@ -271,6 +274,12 @@ namespace ControlEntrada
 
         private void BTodosRegistros_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void BEliminarFoto_Click(object sender, EventArgs e)
+        {
+            this.fotoPictureBox.Image = null;
 
         }
     }
