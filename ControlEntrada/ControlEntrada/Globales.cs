@@ -6,6 +6,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace ControlEntrada
 {
@@ -168,6 +169,113 @@ namespace ControlEntrada
             Image returnImage = Image.FromStream(ms);
             return returnImage;
         }
+        #endregion
+
+        #region Huella
+        public static void LimpiarHuella(ModuloAgregarPersona x)
+        {
+            for (int i = 0; i < 10; i++)
+            {
+                x.Data.Templates[i] = null;
+            }
+            x.noDedoTextBox.Text = "0";
+        }
+        public static void GuardarPersona(ModuloAgregarPersona x)
+        {
+            try
+            {
+                x.personasTableAdapter.InsertarPersona(imageToByteArray(x.fotoPictureBox.Image),
+                    x.cedulaTextBox.Text,
+                    x.nombreTextBox.Text,
+                    x.primerApellidoTextBox.Text,
+                    x.segundoApellidoTextBox.Text,
+                    x.fichaTextBox.Text,
+                    "",
+                    x.Data.Templates[x.i].Bytes,
+                    Convert.ToInt32(x.noDedoTextBox.Text));
+                MessageBox.Show("Registro Guardado", "Felicidades");
+            }
+            catch (Exception e1)
+            {
+                MessageBox.Show("No se pudo guardar el registro " + e1.ToString(), "Error");
+                //throw;
+            }
+        }
+        public static void ModificarPersona(ModuloAgregarPersona x)
+        {
+            try
+            {
+                x.personasTableAdapter.ActualizarPersona(imageToByteArray(x.fotoPictureBox.Image),
+                    x.cedulaTextBox.Text,
+                    x.nombreTextBox.Text,
+                    x.primerApellidoTextBox.Text,
+                    x.segundoApellidoTextBox.Text,
+                    x.fichaTextBox.Text,
+                    "",
+                    x.Data.Templates[x.i].Bytes,
+                    Convert.ToInt32(x.noDedoTextBox.Text), Convert.ToInt32(x.idPersonaTextBox.Text));
+                MessageBox.Show("Registro actualizado", "Felicitaciones");
+            }
+            catch (Exception e1)
+            {
+                MessageBox.Show("No se puede actualizar el registro " + e1.ToString(), "Error");
+                //throw;
+            }
+        }
+        public static void SeleccionarDedo(Personal x)
+        {
+            if (string.IsNullOrEmpty(x.noDedoTextBox.Text))
+            {
+                x.noDedoTextBox.Text = "0";
+            }
+            switch (Convert.ToInt32(x.noDedoTextBox.Text))
+            {
+                case 1:
+                    x.enrollmentControl1.EnrolledFingerMask = 32;
+                    break;
+
+                case 2:               
+                    x.enrollmentControl1.EnrolledFingerMask = 64;
+                    break;
+
+                case 3:
+                    x.enrollmentControl1.EnrolledFingerMask = 128;
+                    break;
+
+                case 4:
+                    x.enrollmentControl1.EnrolledFingerMask = 256;
+                    break;
+
+                case 5:
+                    x.enrollmentControl1.EnrolledFingerMask = 512;
+                    break;
+
+                case 6:
+                    x.enrollmentControl1.EnrolledFingerMask = 16;
+                    break;
+
+                case 7:
+                    x.enrollmentControl1.EnrolledFingerMask = 8;
+                    break;
+
+                case 8:
+                    x.enrollmentControl1.EnrolledFingerMask = 4;
+                    break;
+
+                case 9:
+                    x.enrollmentControl1.EnrolledFingerMask = 2;
+                    break;
+
+                case 10:
+                    x.enrollmentControl1.EnrolledFingerMask = 1;
+                    break;
+
+                default:
+                    x.enrollmentControl1.EnrolledFingerMask = 0;
+                    break;
+            }
+        }
+
         #endregion
     }
 }

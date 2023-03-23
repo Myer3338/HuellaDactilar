@@ -48,7 +48,7 @@ namespace ControlEntrada
 
         private void btnRegistroPersona_Click(object sender, EventArgs e)
         {
-            ModuloPersonas personas = new ModuloPersonas();
+            Personal personas = new Personal();
             personas.ShowDialog();
         }
 

@@ -120,6 +120,9 @@
     <EmbeddedResource Include="ModuloAcercaDe.resx">
       <DependentUpon>ModuloAcercaDe.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ModuloAgregarPersona.resx">
+      <DependentUpon>ModuloAgregarPersona.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ModuloEntradaSalida.resx">
       <DependentUpon>ModuloEntradaSalida.cs</DependentUpon>
     </EmbeddedResource>
