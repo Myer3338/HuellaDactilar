@@ -147,6 +147,17 @@ namespace ControlEntrada
 
         private void BEditar_Click(object sender, EventArgs e)
         {
+            Globales.TipoCrud = 2;//actualizar
+            this.Buscar.Text = this.cedulaTextBox.Text;
+            this.contrasenaTextEdit.Text = Encriptar.Descencriptar1(this.contrasenaTextEdit.Text);
+            this.contrasenaTextEdit.PasswordChar = '\0';
+            this.groupBox2.Enabled = true;
+            this.MoveFirstItem.Enabled = false;
+            this.MovePreviousItem.Enabled = false;
+            this.bindingNavigatorPositionItem.Enabled = false;
+            this.bindingNavigatorCountItem.Enabled = false;
+            this.MoveNextItem.Enabled = false;
+            this.MoveLastItem.Enabled = false;
             this.BNuevo.Enabled = false;
             this.BGuardar.Enabled = true;
             this.BCancelar.Enabled = true;
@@ -155,9 +166,9 @@ namespace ControlEntrada
             this.Buscar.Enabled = false;
             this.BBuscar.Enabled = false;
             this.BTodosRegistros.Enabled = false;
-            this.groupBox2.Enabled = true;
             this.BFoto.Enabled = true;
             this.BEliminarFoto.Enabled = true;
+            this.cedulaTextBox.Focus();
         }
 
         private void BCancelar_Click(object sender, EventArgs e)
@@ -269,12 +280,31 @@ namespace ControlEntrada
 
         private void BBuscar_Click(object sender, EventArgs e)
         {
-
+            if (string.IsNullOrEmpty(this.Buscar.Text))
+            {
+                MessageBox.Show("Digite el numero de documento", "Error");
+                this.Buscar.Focus();
+            }
+            else
+            {
+                General.BuscarRegistros("Select * From Usuarios Where Cedula = " + "'" + this.Buscar.Text + "'");
+                if (General.temporal.Rows.Count > 0)
+                {
+                    Globales.LeerRegistrosUsuarios(this);
+                }
+                else
+                {
+                    this.BTodosRegistros.PerformClick();
+                    MessageBox.Show("El numero de documento no existe", "Error");
+                    this.Buscar.Focus();
+                }
+            }
         }
 
         private void BTodosRegistros_Click(object sender, EventArgs e)
         {
-
+            Globales.VerificarRegisstros(this);
+            this.MoveFirstItem.PerformClick();
         }
 
         private void BEliminarFoto_Click(object sender, EventArgs e)

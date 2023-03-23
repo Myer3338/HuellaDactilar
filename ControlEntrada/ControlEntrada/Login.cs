@@ -26,6 +26,24 @@ namespace ControlEntrada
         private void entrarLogin_Click(object sender, EventArgs e)
         {
             //General.VerificarConexion();
+            if (string.IsNullOrEmpty(this.tbUsuarioLogin.Text))
+            {
+                MessageBox.Show("Por favor digite el usuario", "Notificación");
+                this.tbUsuarioLogin.Focus();
+            }
+            else
+            {
+                if (string.IsNullOrEmpty(this.tbContraseñaLogin.Text))
+                {
+                    MessageBox.Show("Por favor digite la contraseña", "Notificación");
+                    this.tbContraseñaLogin.Focus();
+                }
+                else
+                {
+
+                }
+            }
+
         }
     }
 }

@@ -91,6 +91,7 @@
             this.AcercaDe.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.AcercaDe.TabIndex = 1;
             this.AcercaDe.TabStop = false;
+            this.AcercaDe.Click += new System.EventHandler(this.AcercaDe_Click);
             // 
             // labelMenu2
             // 
@@ -140,6 +141,7 @@
             this.btnRegistroPersona.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnRegistroPersona.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnRegistroPersona.UseVisualStyleBackColor = true;
+            this.btnRegistroPersona.Click += new System.EventHandler(this.btnRegistroPersona_Click);
             // 
             // btnRegEntradaSalida
             // 
@@ -158,6 +160,7 @@
             this.btnRegEntradaSalida.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnRegEntradaSalida.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnRegEntradaSalida.UseVisualStyleBackColor = true;
+            this.btnRegEntradaSalida.Click += new System.EventHandler(this.btnRegEntradaSalida_Click);
             // 
             // btnReportes
             // 
@@ -176,6 +179,7 @@
             this.btnReportes.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnReportes.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnReportes.UseVisualStyleBackColor = true;
+            this.btnReportes.Click += new System.EventHandler(this.btnReportes_Click);
             // 
             // panel
             // 
@@ -203,6 +207,7 @@
             this.Name = "Menu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Menu_KeyDown);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.AcercaDe)).EndInit();

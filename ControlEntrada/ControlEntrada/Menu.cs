@@ -39,5 +39,39 @@ namespace ControlEntrada
             panel.Left = (Width - panel.Width) / 2;
             panel.Top = (Width - panel.Height) / 2;
         }
+
+        private void AcercaDe_Click(object sender, EventArgs e)
+        {
+            ModuloAcercaDe acercaDe = new ModuloAcercaDe();
+            acercaDe.ShowDialog();
+        }
+
+        private void btnRegistroPersona_Click(object sender, EventArgs e)
+        {
+            ModuloPersonas personas = new ModuloPersonas();
+            personas.ShowDialog();
+        }
+
+        private void btnRegEntradaSalida_Click(object sender, EventArgs e)
+        {
+            ModuloEntradaSalida entradaSalida = new ModuloEntradaSalida();
+            entradaSalida.ShowDialog();
+        }
+
+        private void btnReportes_Click(object sender, EventArgs e)
+        {
+            ModuloReportes reportes = new ModuloReportes();
+            reportes.ShowDialog();
+        }
+
+        private void Menu_KeyDown(object sender, KeyEventArgs e)
+        {
+            // NOTA: En el formulario en la propiedad Keypreview = true
+            // Evitar salir con la tecla f4
+            if (e.Alt && e.KeyCode == Keys.F4)
+            {
+                e.Handled = true;
+            }
+        }
     }
 }

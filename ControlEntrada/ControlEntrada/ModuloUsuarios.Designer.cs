@@ -55,15 +55,16 @@
             this.BBuscar = new System.Windows.Forms.ToolStripButton();
             this.BTodosRegistros = new System.Windows.Forms.ToolStripButton();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.id_UsuarioTextBox = new System.Windows.Forms.TextBox();
+            this.labelIDUsuario = new System.Windows.Forms.Label();
             this.rolComboBox = new System.Windows.Forms.ComboBox();
             this.contrasenaTextEdit = new System.Windows.Forms.TextBox();
-            this.id_UsuarioTextBox = new System.Windows.Forms.TextBox();
             this.usuarioTtextBox = new System.Windows.Forms.TextBox();
             this.correoTextBox = new System.Windows.Forms.TextBox();
             this.nombreTextEdit = new System.Windows.Forms.TextBox();
             this.cedulaTextBox = new System.Windows.Forms.TextBox();
             this.labelContraseña = new System.Windows.Forms.Label();
-            this.labelIDUsuario = new System.Windows.Forms.Label();
             this.labelRol = new System.Windows.Forms.Label();
             this.labelUsuario = new System.Windows.Forms.Label();
             this.labelCorreo = new System.Windows.Forms.Label();
@@ -75,15 +76,14 @@
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.UsuariosbindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.UsuariosNavigator)).BeginInit();
             this.UsuariosNavigator.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.fotoPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.UsuariosbindingSource)).BeginInit();
-            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -356,6 +356,32 @@
             this.groupBox2.TabIndex = 10;
             this.groupBox2.TabStop = false;
             // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.id_UsuarioTextBox);
+            this.panel2.Controls.Add(this.labelIDUsuario);
+            this.panel2.Location = new System.Drawing.Point(555, 16);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(23, 12);
+            this.panel2.TabIndex = 18;
+            // 
+            // id_UsuarioTextBox
+            // 
+            this.id_UsuarioTextBox.Enabled = false;
+            this.id_UsuarioTextBox.Location = new System.Drawing.Point(83, -3);
+            this.id_UsuarioTextBox.Name = "id_UsuarioTextBox";
+            this.id_UsuarioTextBox.Size = new System.Drawing.Size(100, 20);
+            this.id_UsuarioTextBox.TabIndex = 15;
+            // 
+            // labelIDUsuario
+            // 
+            this.labelIDUsuario.AutoSize = true;
+            this.labelIDUsuario.Location = new System.Drawing.Point(27, 0);
+            this.labelIDUsuario.Name = "labelIDUsuario";
+            this.labelIDUsuario.Size = new System.Drawing.Size(58, 13);
+            this.labelIDUsuario.TabIndex = 8;
+            this.labelIDUsuario.Text = "Id Usuario:";
+            // 
             // rolComboBox
             // 
             this.rolComboBox.FormattingEnabled = true;
@@ -374,14 +400,6 @@
             this.contrasenaTextEdit.Name = "contrasenaTextEdit";
             this.contrasenaTextEdit.Size = new System.Drawing.Size(294, 20);
             this.contrasenaTextEdit.TabIndex = 16;
-            // 
-            // id_UsuarioTextBox
-            // 
-            this.id_UsuarioTextBox.Enabled = false;
-            this.id_UsuarioTextBox.Location = new System.Drawing.Point(83, -3);
-            this.id_UsuarioTextBox.Name = "id_UsuarioTextBox";
-            this.id_UsuarioTextBox.Size = new System.Drawing.Size(100, 20);
-            this.id_UsuarioTextBox.TabIndex = 15;
             // 
             // usuarioTtextBox
             // 
@@ -419,15 +437,6 @@
             this.labelContraseña.Size = new System.Drawing.Size(64, 13);
             this.labelContraseña.TabIndex = 9;
             this.labelContraseña.Text = "Contraseña:";
-            // 
-            // labelIDUsuario
-            // 
-            this.labelIDUsuario.AutoSize = true;
-            this.labelIDUsuario.Location = new System.Drawing.Point(27, 0);
-            this.labelIDUsuario.Name = "labelIDUsuario";
-            this.labelIDUsuario.Size = new System.Drawing.Size(58, 13);
-            this.labelIDUsuario.TabIndex = 8;
-            this.labelIDUsuario.Text = "Id Usuario:";
             // 
             // labelRol
             // 
@@ -513,15 +522,6 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.id_UsuarioTextBox);
-            this.panel2.Controls.Add(this.labelIDUsuario);
-            this.panel2.Location = new System.Drawing.Point(555, 16);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(23, 12);
-            this.panel2.TabIndex = 18;
-            // 
             // ModuloUsuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -548,10 +548,10 @@
             this.UsuariosNavigator.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.fotoPictureBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.UsuariosbindingSource)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.fotoPictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.UsuariosbindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
