@@ -29,34 +29,137 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.Label idPersonaLabel;
+            System.Windows.Forms.Label fotoLabel;
+            System.Windows.Forms.Label cedulaLabel;
+            System.Windows.Forms.Label nombreLabel;
+            System.Windows.Forms.Label primerApellidoLabel;
+            System.Windows.Forms.Label segundoApellidoLabel;
+            System.Windows.Forms.Label fichaLabel;
+            System.Windows.Forms.Label huellaLabel;
+            System.Windows.Forms.Label noDedoLabel;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ModuloEntradaSalida));
             this.labelMenu = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.cerrar = new System.Windows.Forms.Button();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.dataSet1 = new ControlEntrada.DataSet1();
+            this.groupBox = new System.Windows.Forms.GroupBox();
+            this.verificationControl1 = new DPFP.Gui.Verification.VerificationControl();
+            this.Resultado = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.verificacion = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.idPersonaTextBox = new System.Windows.Forms.TextBox();
+            this.noDedoTextBox = new System.Windows.Forms.TextBox();
+            this.huellaPictureBox = new System.Windows.Forms.PictureBox();
+            this.fotoPictureBox = new System.Windows.Forms.PictureBox();
+            this.cedulaTextBox = new System.Windows.Forms.TextBox();
+            this.nombreTextBox = new System.Windows.Forms.TextBox();
+            this.primerApellidoTextBox = new System.Windows.Forms.TextBox();
+            this.segundoApellidoTextBox = new System.Windows.Forms.TextBox();
+            this.fichaTextBox = new System.Windows.Forms.TextBox();
             this.personasBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataSet1 = new ControlEntrada.DataSet1();
             this.personasTableAdapter = new ControlEntrada.DataSet1TableAdapters.PersonasTableAdapter();
             this.tableAdapterManager = new ControlEntrada.DataSet1TableAdapters.TableAdapterManager();
-            this.personasBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
-            this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
-            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
-            this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
-            this.personasBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
+            idPersonaLabel = new System.Windows.Forms.Label();
+            fotoLabel = new System.Windows.Forms.Label();
+            cedulaLabel = new System.Windows.Forms.Label();
+            nombreLabel = new System.Windows.Forms.Label();
+            primerApellidoLabel = new System.Windows.Forms.Label();
+            segundoApellidoLabel = new System.Windows.Forms.Label();
+            fichaLabel = new System.Windows.Forms.Label();
+            huellaLabel = new System.Windows.Forms.Label();
+            noDedoLabel = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).BeginInit();
+            this.groupBox.SuspendLayout();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.huellaPictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fotoPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.personasBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.personasBindingNavigator)).BeginInit();
-            this.personasBindingNavigator.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).BeginInit();
             this.SuspendLayout();
+            // 
+            // idPersonaLabel
+            // 
+            idPersonaLabel.AutoSize = true;
+            idPersonaLabel.Location = new System.Drawing.Point(1, 6);
+            idPersonaLabel.Name = "idPersonaLabel";
+            idPersonaLabel.Size = new System.Drawing.Size(61, 13);
+            idPersonaLabel.TabIndex = 0;
+            idPersonaLabel.Text = "Id Persona:";
+            // 
+            // fotoLabel
+            // 
+            fotoLabel.AutoSize = true;
+            fotoLabel.Location = new System.Drawing.Point(11, 19);
+            fotoLabel.Name = "fotoLabel";
+            fotoLabel.Size = new System.Drawing.Size(31, 13);
+            fotoLabel.TabIndex = 2;
+            fotoLabel.Text = "Foto:";
+            // 
+            // cedulaLabel
+            // 
+            cedulaLabel.AutoSize = true;
+            cedulaLabel.Location = new System.Drawing.Point(223, 76);
+            cedulaLabel.Name = "cedulaLabel";
+            cedulaLabel.Size = new System.Drawing.Size(43, 13);
+            cedulaLabel.TabIndex = 4;
+            cedulaLabel.Text = "Cedula:";
+            // 
+            // nombreLabel
+            // 
+            nombreLabel.AutoSize = true;
+            nombreLabel.Location = new System.Drawing.Point(223, 102);
+            nombreLabel.Name = "nombreLabel";
+            nombreLabel.Size = new System.Drawing.Size(47, 13);
+            nombreLabel.TabIndex = 6;
+            nombreLabel.Text = "Nombre:";
+            // 
+            // primerApellidoLabel
+            // 
+            primerApellidoLabel.AutoSize = true;
+            primerApellidoLabel.Location = new System.Drawing.Point(223, 128);
+            primerApellidoLabel.Name = "primerApellidoLabel";
+            primerApellidoLabel.Size = new System.Drawing.Size(79, 13);
+            primerApellidoLabel.TabIndex = 8;
+            primerApellidoLabel.Text = "Primer Apellido:";
+            // 
+            // segundoApellidoLabel
+            // 
+            segundoApellidoLabel.AutoSize = true;
+            segundoApellidoLabel.Location = new System.Drawing.Point(223, 154);
+            segundoApellidoLabel.Name = "segundoApellidoLabel";
+            segundoApellidoLabel.Size = new System.Drawing.Size(93, 13);
+            segundoApellidoLabel.TabIndex = 10;
+            segundoApellidoLabel.Text = "Segundo Apellido:";
+            // 
+            // fichaLabel
+            // 
+            fichaLabel.AutoSize = true;
+            fichaLabel.Location = new System.Drawing.Point(223, 48);
+            fichaLabel.Name = "fichaLabel";
+            fichaLabel.Size = new System.Drawing.Size(36, 13);
+            fichaLabel.TabIndex = 12;
+            fichaLabel.Text = "Ficha:";
+            // 
+            // huellaLabel
+            // 
+            huellaLabel.AutoSize = true;
+            huellaLabel.Location = new System.Drawing.Point(1, 29);
+            huellaLabel.Name = "huellaLabel";
+            huellaLabel.Size = new System.Drawing.Size(40, 13);
+            huellaLabel.TabIndex = 14;
+            huellaLabel.Text = "Huella:";
+            // 
+            // noDedoLabel
+            // 
+            noDedoLabel.AutoSize = true;
+            noDedoLabel.Location = new System.Drawing.Point(1, 88);
+            noDedoLabel.Name = "noDedoLabel";
+            noDedoLabel.Size = new System.Drawing.Size(53, 13);
+            noDedoLabel.TabIndex = 16;
+            noDedoLabel.Text = "No Dedo:";
             // 
             // labelMenu
             // 
@@ -93,23 +196,175 @@
             this.cerrar.UseVisualStyleBackColor = true;
             this.cerrar.Click += new System.EventHandler(this.cerrar_Click);
             // 
-            // groupBox1
+            // groupBox
             // 
-            this.groupBox1.Location = new System.Drawing.Point(34, 58);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(668, 402);
-            this.groupBox1.TabIndex = 2;
-            this.groupBox1.TabStop = false;
+            this.groupBox.Controls.Add(this.verificationControl1);
+            this.groupBox.Controls.Add(this.Resultado);
+            this.groupBox.Controls.Add(this.label3);
+            this.groupBox.Controls.Add(this.label2);
+            this.groupBox.Controls.Add(this.verificacion);
+            this.groupBox.Controls.Add(this.panel2);
+            this.groupBox.Controls.Add(fotoLabel);
+            this.groupBox.Controls.Add(this.fotoPictureBox);
+            this.groupBox.Controls.Add(cedulaLabel);
+            this.groupBox.Controls.Add(this.cedulaTextBox);
+            this.groupBox.Controls.Add(nombreLabel);
+            this.groupBox.Controls.Add(this.nombreTextBox);
+            this.groupBox.Controls.Add(primerApellidoLabel);
+            this.groupBox.Controls.Add(this.primerApellidoTextBox);
+            this.groupBox.Controls.Add(segundoApellidoLabel);
+            this.groupBox.Controls.Add(this.segundoApellidoTextBox);
+            this.groupBox.Controls.Add(fichaLabel);
+            this.groupBox.Controls.Add(this.fichaTextBox);
+            this.groupBox.Location = new System.Drawing.Point(34, 58);
+            this.groupBox.Name = "groupBox";
+            this.groupBox.Size = new System.Drawing.Size(668, 402);
+            this.groupBox.TabIndex = 2;
+            this.groupBox.TabStop = false;
             // 
-            // dataSet1
+            // verificationControl1
             // 
-            this.dataSet1.DataSetName = "DataSet1";
-            this.dataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.verificationControl1.Active = true;
+            this.verificationControl1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.verificationControl1.Location = new System.Drawing.Point(603, 41);
+            this.verificationControl1.Name = "verificationControl1";
+            this.verificationControl1.ReaderSerialNumber = "00000000-0000-0000-0000-000000000000";
+            this.verificationControl1.Size = new System.Drawing.Size(48, 47);
+            this.verificationControl1.TabIndex = 23;
+            this.verificationControl1.OnComplete += new DPFP.Gui.Verification.VerificationControl._OnComplete(this.verificationControl1_OnComplete);
+            // 
+            // Resultado
+            // 
+            this.Resultado.Location = new System.Drawing.Point(496, 69);
+            this.Resultado.Name = "Resultado";
+            this.Resultado.Size = new System.Drawing.Size(86, 20);
+            this.Resultado.TabIndex = 22;
+            this.Resultado.TextChanged += new System.EventHandler(this.Resultado_TextChanged);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(51, 342);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(35, 13);
+            this.label3.TabIndex = 21;
+            this.label3.Text = "label3";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(51, 268);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(35, 13);
+            this.label2.TabIndex = 20;
+            this.label2.Text = "label2";
+            // 
+            // verificacion
+            // 
+            this.verificacion.AutoSize = true;
+            this.verificacion.Location = new System.Drawing.Point(493, 48);
+            this.verificacion.Name = "verificacion";
+            this.verificacion.Size = new System.Drawing.Size(62, 13);
+            this.verificacion.TabIndex = 19;
+            this.verificacion.Text = "Verificacion";
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.idPersonaTextBox);
+            this.panel2.Controls.Add(idPersonaLabel);
+            this.panel2.Controls.Add(this.noDedoTextBox);
+            this.panel2.Controls.Add(noDedoLabel);
+            this.panel2.Controls.Add(this.huellaPictureBox);
+            this.panel2.Controls.Add(huellaLabel);
+            this.panel2.Enabled = false;
+            this.panel2.Location = new System.Drawing.Point(640, 19);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(11, 10);
+            this.panel2.TabIndex = 18;
+            // 
+            // idPersonaTextBox
+            // 
+            this.idPersonaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.personasBindingSource, "IdPersona", true));
+            this.idPersonaTextBox.Location = new System.Drawing.Point(100, 3);
+            this.idPersonaTextBox.Name = "idPersonaTextBox";
+            this.idPersonaTextBox.Size = new System.Drawing.Size(100, 20);
+            this.idPersonaTextBox.TabIndex = 1;
+            // 
+            // noDedoTextBox
+            // 
+            this.noDedoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.personasBindingSource, "NoDedo", true));
+            this.noDedoTextBox.Location = new System.Drawing.Point(100, 85);
+            this.noDedoTextBox.Name = "noDedoTextBox";
+            this.noDedoTextBox.Size = new System.Drawing.Size(100, 20);
+            this.noDedoTextBox.TabIndex = 17;
+            // 
+            // huellaPictureBox
+            // 
+            this.huellaPictureBox.DataBindings.Add(new System.Windows.Forms.Binding("Image", this.personasBindingSource, "Huella", true));
+            this.huellaPictureBox.Location = new System.Drawing.Point(100, 29);
+            this.huellaPictureBox.Name = "huellaPictureBox";
+            this.huellaPictureBox.Size = new System.Drawing.Size(100, 50);
+            this.huellaPictureBox.TabIndex = 15;
+            this.huellaPictureBox.TabStop = false;
+            // 
+            // fotoPictureBox
+            // 
+            this.fotoPictureBox.DataBindings.Add(new System.Windows.Forms.Binding("Image", this.personasBindingSource, "Foto", true));
+            this.fotoPictureBox.Location = new System.Drawing.Point(39, 35);
+            this.fotoPictureBox.Name = "fotoPictureBox";
+            this.fotoPictureBox.Size = new System.Drawing.Size(173, 142);
+            this.fotoPictureBox.TabIndex = 3;
+            this.fotoPictureBox.TabStop = false;
+            // 
+            // cedulaTextBox
+            // 
+            this.cedulaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.personasBindingSource, "Cedula", true));
+            this.cedulaTextBox.Location = new System.Drawing.Point(322, 73);
+            this.cedulaTextBox.Name = "cedulaTextBox";
+            this.cedulaTextBox.Size = new System.Drawing.Size(157, 20);
+            this.cedulaTextBox.TabIndex = 5;
+            // 
+            // nombreTextBox
+            // 
+            this.nombreTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.personasBindingSource, "Nombre", true));
+            this.nombreTextBox.Location = new System.Drawing.Point(322, 99);
+            this.nombreTextBox.Name = "nombreTextBox";
+            this.nombreTextBox.Size = new System.Drawing.Size(329, 20);
+            this.nombreTextBox.TabIndex = 7;
+            // 
+            // primerApellidoTextBox
+            // 
+            this.primerApellidoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.personasBindingSource, "PrimerApellido", true));
+            this.primerApellidoTextBox.Location = new System.Drawing.Point(322, 125);
+            this.primerApellidoTextBox.Name = "primerApellidoTextBox";
+            this.primerApellidoTextBox.Size = new System.Drawing.Size(329, 20);
+            this.primerApellidoTextBox.TabIndex = 9;
+            // 
+            // segundoApellidoTextBox
+            // 
+            this.segundoApellidoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.personasBindingSource, "SegundoApellido", true));
+            this.segundoApellidoTextBox.Location = new System.Drawing.Point(322, 151);
+            this.segundoApellidoTextBox.Name = "segundoApellidoTextBox";
+            this.segundoApellidoTextBox.Size = new System.Drawing.Size(329, 20);
+            this.segundoApellidoTextBox.TabIndex = 11;
+            // 
+            // fichaTextBox
+            // 
+            this.fichaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.personasBindingSource, "Ficha", true));
+            this.fichaTextBox.Location = new System.Drawing.Point(322, 45);
+            this.fichaTextBox.Name = "fichaTextBox";
+            this.fichaTextBox.Size = new System.Drawing.Size(157, 20);
+            this.fichaTextBox.TabIndex = 13;
             // 
             // personasBindingSource
             // 
             this.personasBindingSource.DataMember = "Personas";
             this.personasBindingSource.DataSource = this.dataSet1;
+            // 
+            // dataSet1
+            // 
+            this.dataSet1.DataSetName = "DataSet1";
+            this.dataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // personasTableAdapter
             // 
@@ -122,138 +377,13 @@
             this.tableAdapterManager.RegistrosTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = ControlEntrada.DataSet1TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
-            // personasBindingNavigator
-            // 
-            this.personasBindingNavigator.AddNewItem = this.bindingNavigatorAddNewItem;
-            this.personasBindingNavigator.BindingSource = this.personasBindingSource;
-            this.personasBindingNavigator.CountItem = this.bindingNavigatorCountItem;
-            this.personasBindingNavigator.DeleteItem = this.bindingNavigatorDeleteItem;
-            this.personasBindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.bindingNavigatorMoveFirstItem,
-            this.bindingNavigatorMovePreviousItem,
-            this.bindingNavigatorSeparator,
-            this.bindingNavigatorPositionItem,
-            this.bindingNavigatorCountItem,
-            this.bindingNavigatorSeparator1,
-            this.bindingNavigatorMoveNextItem,
-            this.bindingNavigatorMoveLastItem,
-            this.bindingNavigatorSeparator2,
-            this.bindingNavigatorAddNewItem,
-            this.bindingNavigatorDeleteItem,
-            this.personasBindingNavigatorSaveItem});
-            this.personasBindingNavigator.Location = new System.Drawing.Point(0, 0);
-            this.personasBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
-            this.personasBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
-            this.personasBindingNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
-            this.personasBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
-            this.personasBindingNavigator.Name = "personasBindingNavigator";
-            this.personasBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.personasBindingNavigator.Size = new System.Drawing.Size(111, 25);
-            this.personasBindingNavigator.TabIndex = 3;
-            this.personasBindingNavigator.Text = "bindingNavigator1";
-            // 
-            // bindingNavigatorMoveFirstItem
-            // 
-            this.bindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
-            this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
-            this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorMoveFirstItem.Text = "Mover primero";
-            // 
-            // bindingNavigatorMovePreviousItem
-            // 
-            this.bindingNavigatorMovePreviousItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
-            this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
-            this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorMovePreviousItem.Text = "Mover anterior";
-            // 
-            // bindingNavigatorSeparator
-            // 
-            this.bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 25);
-            // 
-            // bindingNavigatorPositionItem
-            // 
-            this.bindingNavigatorPositionItem.AccessibleName = "Posición";
-            this.bindingNavigatorPositionItem.AutoSize = false;
-            this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
-            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 23);
-            this.bindingNavigatorPositionItem.Text = "0";
-            this.bindingNavigatorPositionItem.ToolTipText = "Posición actual";
-            // 
-            // bindingNavigatorCountItem
-            // 
-            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(37, 15);
-            this.bindingNavigatorCountItem.Text = "de {0}";
-            this.bindingNavigatorCountItem.ToolTipText = "Número total de elementos";
-            // 
-            // bindingNavigatorSeparator1
-            // 
-            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 6);
-            // 
-            // bindingNavigatorMoveNextItem
-            // 
-            this.bindingNavigatorMoveNextItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
-            this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
-            this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 20);
-            this.bindingNavigatorMoveNextItem.Text = "Mover siguiente";
-            // 
-            // bindingNavigatorMoveLastItem
-            // 
-            this.bindingNavigatorMoveLastItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
-            this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
-            this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 20);
-            this.bindingNavigatorMoveLastItem.Text = "Mover último";
-            // 
-            // bindingNavigatorSeparator2
-            // 
-            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 6);
-            // 
-            // bindingNavigatorAddNewItem
-            // 
-            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
-            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
-            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 20);
-            this.bindingNavigatorAddNewItem.Text = "Agregar nuevo";
-            // 
-            // bindingNavigatorDeleteItem
-            // 
-            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
-            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
-            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 20);
-            this.bindingNavigatorDeleteItem.Text = "Eliminar";
-            // 
-            // personasBindingNavigatorSaveItem
-            // 
-            this.personasBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.personasBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("personasBindingNavigatorSaveItem.Image")));
-            this.personasBindingNavigatorSaveItem.Name = "personasBindingNavigatorSaveItem";
-            this.personasBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 23);
-            this.personasBindingNavigatorSaveItem.Text = "Guardar datos";
-            this.personasBindingNavigatorSaveItem.Click += new System.EventHandler(this.personasBindingNavigatorSaveItem_Click);
-            // 
             // ModuloEntradaSalida
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(732, 486);
-            this.Controls.Add(this.personasBindingNavigator);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.groupBox);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
@@ -266,13 +396,15 @@
             this.Load += new System.EventHandler(this.ModuloEntradaSalida_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).EndInit();
+            this.groupBox.ResumeLayout(false);
+            this.groupBox.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.huellaPictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fotoPictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.personasBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.personasBindingNavigator)).EndInit();
-            this.personasBindingNavigator.ResumeLayout(false);
-            this.personasBindingNavigator.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -280,24 +412,26 @@
 
         private System.Windows.Forms.Label labelMenu;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox groupBox;
         private System.Windows.Forms.Button cerrar;
         private DataSet1 dataSet1;
         private System.Windows.Forms.BindingSource personasBindingSource;
         private DataSet1TableAdapters.PersonasTableAdapter personasTableAdapter;
         private DataSet1TableAdapters.TableAdapterManager tableAdapterManager;
-        private System.Windows.Forms.BindingNavigator personasBindingNavigator;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorAddNewItem;
-        private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorDeleteItem;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveFirstItem;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorMovePreviousItem;
-        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator;
-        private System.Windows.Forms.ToolStripTextBox bindingNavigatorPositionItem;
-        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator1;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveNextItem;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
-        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
-        private System.Windows.Forms.ToolStripButton personasBindingNavigatorSaveItem;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label verificacion;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.TextBox idPersonaTextBox;
+        private System.Windows.Forms.TextBox noDedoTextBox;
+        private System.Windows.Forms.PictureBox huellaPictureBox;
+        private System.Windows.Forms.PictureBox fotoPictureBox;
+        private System.Windows.Forms.TextBox cedulaTextBox;
+        private System.Windows.Forms.TextBox nombreTextBox;
+        private System.Windows.Forms.TextBox primerApellidoTextBox;
+        private System.Windows.Forms.TextBox segundoApellidoTextBox;
+        private System.Windows.Forms.TextBox fichaTextBox;
+        private DPFP.Gui.Verification.VerificationControl verificationControl1;
+        public System.Windows.Forms.TextBox Resultado;
     }
 }

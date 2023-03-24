@@ -190,7 +190,6 @@ namespace ControlEntrada
                     x.primerApellidoTextBox.Text,
                     x.segundoApellidoTextBox.Text,
                     x.fichaTextBox.Text,
-                    "",
                     x.Data.Templates[x.i].Bytes,
                     Convert.ToInt32(x.noDedoTextBox.Text));
                 MessageBox.Show("Registro Guardado", "Felicidades");
@@ -211,7 +210,6 @@ namespace ControlEntrada
                     x.primerApellidoTextBox.Text,
                     x.segundoApellidoTextBox.Text,
                     x.fichaTextBox.Text,
-                    "",
                     x.Data.Templates[x.i].Bytes,
                     Convert.ToInt32(x.noDedoTextBox.Text), Convert.ToInt32(x.idPersonaTextBox.Text));
                 MessageBox.Show("Registro actualizado", "Felicitaciones");
