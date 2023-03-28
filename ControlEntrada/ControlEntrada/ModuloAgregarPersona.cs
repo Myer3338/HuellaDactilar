@@ -163,6 +163,7 @@ namespace ControlEntrada
                                                     this.noDedoTextBox.Text = (i + 1).ToString();
                                                     this.i = i;
                                                     Globales.GuardarPersona(this);
+                                                    this.personasTableAdapter.Fill(this.dataSet1.Personas);
                                                     this.Close();
                                                 }
                                             }
@@ -171,6 +172,7 @@ namespace ControlEntrada
                                                 if (this.enrollmentControl1.EnrolledFingerMask != 0)
                                                 {
                                                     Globales.GuardarPersona(this);
+                                                    this.personasTableAdapter.Fill(this.dataSet1.Personas);
                                                     this.Close();
                                                 }
                                             }

@@ -234,7 +234,7 @@
             this.panel3.Controls.Add(this.idRegistroEntrada);
             this.panel3.Location = new System.Drawing.Point(390, 210);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(10, 10);
+            this.panel3.Size = new System.Drawing.Size(17, 19);
             this.panel3.TabIndex = 25;
             // 
             // idRegistroEntrada

@@ -193,6 +193,7 @@
             this.tableAdapterManager.PersonasTableAdapter = this.personasTableAdapter;
             this.tableAdapterManager.RegistrosTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = ControlEntrada.DataSet1TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.tableAdapterManager.UsuariosTableAdapter = null;
             // 
             // idPersonaTextBox
             // 
@@ -363,7 +364,6 @@
         #endregion
 
         private DPFP.Gui.Enrollment.EnrollmentControl enrollmentControl1;
-        private DataSet1 dataSet1;
         private System.Windows.Forms.BindingSource personasBindingSource;
         private DataSet1TableAdapters.TableAdapterManager tableAdapterManager;
         private System.Windows.Forms.PictureBox huellaPictureBox;
@@ -383,5 +383,6 @@
         public System.Windows.Forms.TextBox segundoApellidoTextBox;
         public System.Windows.Forms.TextBox fichaTextBox;
         public System.Windows.Forms.TextBox idPersonaTextBox;
+        public DataSet1 dataSet1;
     }
 }

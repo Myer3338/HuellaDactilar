@@ -72,7 +72,9 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.huellaPictureBox = new System.Windows.Forms.PictureBox();
             this.personasDataGridView = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.personasTableAdapter = new ControlEntrada.DataSet1TableAdapters.PersonasTableAdapter();
+            this.tableAdapterManager = new ControlEntrada.DataSet1TableAdapters.TableAdapterManager();
+            this.fotoPictureBox = new System.Windows.Forms.PictureBox();
             this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -80,9 +82,6 @@
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.personasTableAdapter = new ControlEntrada.DataSet1TableAdapters.PersonasTableAdapter();
-            this.tableAdapterManager = new ControlEntrada.DataSet1TableAdapters.TableAdapterManager();
-            this.fotoPictureBox = new System.Windows.Forms.PictureBox();
             idPersonaLabel = new System.Windows.Forms.Label();
             fotoLabel = new System.Windows.Forms.Label();
             cedulaLabel = new System.Windows.Forms.Label();
@@ -484,10 +483,10 @@
             this.personasDataGridView.AllowUserToAddRows = false;
             this.personasDataGridView.AllowUserToDeleteRows = false;
             this.personasDataGridView.AutoGenerateColumns = false;
+            this.personasDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.personasDataGridView.BackgroundColor = System.Drawing.Color.White;
             this.personasDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.personasDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
             this.dataGridViewImageColumn1,
             this.dataGridViewTextBoxColumn2,
             this.dataGridViewTextBoxColumn3,
@@ -503,12 +502,27 @@
             this.personasDataGridView.TabIndex = 30;
             this.personasDataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.personasDataGridView_CellClick);
             // 
-            // dataGridViewTextBoxColumn1
+            // personasTableAdapter
             // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "IdPersona";
-            this.dataGridViewTextBoxColumn1.HeaderText = "IdPersona";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.personasTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.PersonasTableAdapter = this.personasTableAdapter;
+            this.tableAdapterManager.RegistrosTableAdapter = null;
+            this.tableAdapterManager.UpdateOrder = ControlEntrada.DataSet1TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.tableAdapterManager.UsuariosTableAdapter = null;
+            // 
+            // fotoPictureBox
+            // 
+            this.fotoPictureBox.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.fotoPictureBox.DataBindings.Add(new System.Windows.Forms.Binding("Image", this.personasBindingSource, "Foto", true));
+            this.fotoPictureBox.Location = new System.Drawing.Point(531, 134);
+            this.fotoPictureBox.Name = "fotoPictureBox";
+            this.fotoPictureBox.Size = new System.Drawing.Size(204, 194);
+            this.fotoPictureBox.TabIndex = 15;
+            this.fotoPictureBox.TabStop = false;
             // 
             // dataGridViewImageColumn1
             // 
@@ -558,28 +572,6 @@
             this.dataGridViewTextBoxColumn7.HeaderText = "NoDedo";
             this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
             this.dataGridViewTextBoxColumn7.ReadOnly = true;
-            // 
-            // personasTableAdapter
-            // 
-            this.personasTableAdapter.ClearBeforeFill = true;
-            // 
-            // tableAdapterManager
-            // 
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.PersonasTableAdapter = this.personasTableAdapter;
-            this.tableAdapterManager.RegistrosTableAdapter = null;
-            this.tableAdapterManager.UpdateOrder = ControlEntrada.DataSet1TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            this.tableAdapterManager.UsuariosTableAdapter = null;
-            // 
-            // fotoPictureBox
-            // 
-            this.fotoPictureBox.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.fotoPictureBox.DataBindings.Add(new System.Windows.Forms.Binding("Image", this.personasBindingSource, "Foto", true));
-            this.fotoPictureBox.Location = new System.Drawing.Point(531, 134);
-            this.fotoPictureBox.Name = "fotoPictureBox";
-            this.fotoPictureBox.Size = new System.Drawing.Size(204, 194);
-            this.fotoPictureBox.TabIndex = 15;
-            this.fotoPictureBox.TabStop = false;
             // 
             // Personal
             // 
@@ -665,7 +657,8 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.ToolStripButton editarPersona;
         private System.Windows.Forms.ToolStripButton EliminarPersona;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.ToolStripButton Imprimir;
+        public DataSet1TableAdapters.PersonasTableAdapter personasTableAdapter;
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
@@ -673,7 +666,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
-        private System.Windows.Forms.ToolStripButton Imprimir;
-        public DataSet1TableAdapters.PersonasTableAdapter personasTableAdapter;
     }
 }

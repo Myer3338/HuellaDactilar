@@ -54,7 +54,14 @@ namespace ControlEntrada
         private void bindingNavigatorAddNewItem_Click(object sender, EventArgs e)
         {
             ModuloAgregarPersona agregarPersona = new ModuloAgregarPersona();
-            agregarPersona.ShowDialog();
+           
+            DialogResult result = agregarPersona.ShowDialog();
+
+            if (result == DialogResult.Cancel)
+            {
+                this.personasTableAdapter.Fill(this.dataSet1.Personas);
+            }
+       
         }
 
         private void editarPersona_Click(object sender, EventArgs e)
@@ -72,12 +79,21 @@ namespace ControlEntrada
             else if (MessageBox.Show("¿Desea eliminar el registro?", "Eliminar registro",
                MessageBoxButtons.OKCancel, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) == DialogResult.OK)
             {
-                this.personasTableAdapter.EliminarPersonasByDocumento(Globales.Ced);
+                try
+                {
+                    this.personasTableAdapter.EliminarPersonasByDocumento(Globales.Ced);
+                    MessageBox.Show("El registro se ha eliminado con exito", "Notificación");
+                    Globales.Ced = string.Empty;
+                    this.personasTableAdapter.Fill(this.dataSet1.Personas);
+                }
+                catch (Exception)
+                {
 
-                MessageBox.Show("El registro se ha eliminado con exito", "Notificación");
+                    MessageBox.Show("No se puede borrar el usuario por que tiene entradas y saliidas", "Notificación");
+                }
+                
             }
-            Globales.Ced = string.Empty;
-            this.personasTableAdapter.Fill(this.dataSet1.Personas);
+       
         }
 
         private void personasDataGridView_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -85,7 +101,7 @@ namespace ControlEntrada
             int n = e.RowIndex;
             if (n != -1)
             {
-                Globales.Ced = (personasDataGridView.Rows[e.RowIndex].Cells[1].Value.ToString());
+                Globales.Ced = (personasDataGridView.Rows[e.RowIndex].Cells[2].Value.ToString());
             }
         }
     }

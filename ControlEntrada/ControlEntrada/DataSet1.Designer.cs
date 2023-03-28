@@ -3318,11 +3318,11 @@ SELECT Id_Entrada, IdPersona, Fecha_Entrada, Registro_Entrada, Fecha_Salida, Reg
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[1].Connection = this.Connection;
             this._commandCollection[1].CommandText = "UPDATE       Registros\r\nSET                Fecha_Salida = @Fecha_Salida, Registro" +
-                "_Salida = @Registro_Salida\r\nWHERE        (Id_Entrada = @Original_Id_Entrada)";
+                "_Salida = @Registro_Salida\r\nWHERE        (Id_Entrada = @Id_Entrada)";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Fecha_Salida", global::System.Data.SqlDbType.DateTime, 8, global::System.Data.ParameterDirection.Input, 0, 0, "Fecha_Salida", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Registro_Salida", global::System.Data.SqlDbType.VarChar, 1, global::System.Data.ParameterDirection.Input, 0, 0, "Registro_Salida", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Id_Entrada", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "Id_Entrada", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Id_Entrada", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "Id_Entrada", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[2].Connection = this.Connection;
             this._commandCollection[2].CommandText = "SELECT        Id_Entrada, IdPersona, Fecha_Entrada, Registro_Entrada, Fecha_Salid" +
@@ -3334,15 +3334,12 @@ SELECT Id_Entrada, IdPersona, Fecha_Entrada, Registro_Entrada, Fecha_Salida, Reg
             this._commandCollection[3] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[3].Connection = this.Connection;
             this._commandCollection[3].CommandText = "INSERT INTO Registros\r\n                         (IdPersona, Fecha_Entrada, Regist" +
-                "ro_Entrada, Fecha_Salida, Registro_Salida, Cedula, Usuario)\r\nVALUES        (@IdP" +
-                "ersona,@Fecha_Entrada,@Registro_Entrada,@Fecha_Salida,@Registro_Salida,@Cedula,@" +
-                "Usuario)";
+                "ro_Entrada, Cedula, Usuario)\r\nVALUES        (@IdPersona,@Fecha_Entrada,@Registro" +
+                "_Entrada,@Cedula,@Usuario)";
             this._commandCollection[3].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IdPersona", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "IdPersona", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Fecha_Entrada", global::System.Data.SqlDbType.DateTime, 8, global::System.Data.ParameterDirection.Input, 0, 0, "Fecha_Entrada", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Registro_Entrada", global::System.Data.SqlDbType.VarChar, 1, global::System.Data.ParameterDirection.Input, 0, 0, "Registro_Entrada", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Fecha_Salida", global::System.Data.SqlDbType.DateTime, 8, global::System.Data.ParameterDirection.Input, 0, 0, "Fecha_Salida", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Registro_Salida", global::System.Data.SqlDbType.VarChar, 1, global::System.Data.ParameterDirection.Input, 0, 0, "Registro_Salida", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Cedula", global::System.Data.SqlDbType.VarChar, 20, global::System.Data.ParameterDirection.Input, 0, 0, "Cedula", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Usuario", global::System.Data.SqlDbType.VarChar, 15, global::System.Data.ParameterDirection.Input, 0, 0, "Usuario", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
@@ -3709,7 +3706,7 @@ SELECT Id_Entrada, IdPersona, Fecha_Entrada, Registro_Entrada, Fecha_Salida, Reg
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, false)]
-        public virtual int ActualizarSalida(global::System.Nullable<global::System.DateTime> Fecha_Salida, string Registro_Salida, int Original_Id_Entrada) {
+        public virtual int ActualizarSalida(global::System.Nullable<global::System.DateTime> Fecha_Salida, string Registro_Salida, int Id_Entrada) {
             global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[1];
             if ((Fecha_Salida.HasValue == true)) {
                 command.Parameters[0].Value = ((System.DateTime)(Fecha_Salida.Value));
@@ -3723,7 +3720,7 @@ SELECT Id_Entrada, IdPersona, Fecha_Entrada, Registro_Entrada, Fecha_Salida, Reg
             else {
                 command.Parameters[1].Value = ((string)(Registro_Salida));
             }
-            command.Parameters[2].Value = ((int)(Original_Id_Entrada));
+            command.Parameters[2].Value = ((int)(Id_Entrada));
             global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
             if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -3745,7 +3742,7 @@ SELECT Id_Entrada, IdPersona, Fecha_Entrada, Registro_Entrada, Fecha_Salida, Reg
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, false)]
-        public virtual int GuardarRegistroEntradaSalida(global::System.Nullable<int> IdPersona, global::System.Nullable<global::System.DateTime> Fecha_Entrada, string Registro_Entrada, global::System.Nullable<global::System.DateTime> Fecha_Salida, string Registro_Salida, string Cedula, string Usuario) {
+        public virtual int GuardarRegistroEntrada(global::System.Nullable<int> IdPersona, global::System.Nullable<global::System.DateTime> Fecha_Entrada, string Registro_Entrada, string Cedula, string Usuario) {
             global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[3];
             if ((IdPersona.HasValue == true)) {
                 command.Parameters[0].Value = ((int)(IdPersona.Value));
@@ -3765,29 +3762,17 @@ SELECT Id_Entrada, IdPersona, Fecha_Entrada, Registro_Entrada, Fecha_Salida, Reg
             else {
                 command.Parameters[2].Value = ((string)(Registro_Entrada));
             }
-            if ((Fecha_Salida.HasValue == true)) {
-                command.Parameters[3].Value = ((System.DateTime)(Fecha_Salida.Value));
-            }
-            else {
+            if ((Cedula == null)) {
                 command.Parameters[3].Value = global::System.DBNull.Value;
             }
-            if ((Registro_Salida == null)) {
+            else {
+                command.Parameters[3].Value = ((string)(Cedula));
+            }
+            if ((Usuario == null)) {
                 command.Parameters[4].Value = global::System.DBNull.Value;
             }
             else {
-                command.Parameters[4].Value = ((string)(Registro_Salida));
-            }
-            if ((Cedula == null)) {
-                command.Parameters[5].Value = global::System.DBNull.Value;
-            }
-            else {
-                command.Parameters[5].Value = ((string)(Cedula));
-            }
-            if ((Usuario == null)) {
-                command.Parameters[6].Value = global::System.DBNull.Value;
-            }
-            else {
-                command.Parameters[6].Value = ((string)(Usuario));
+                command.Parameters[4].Value = ((string)(Usuario));
             }
             global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
             if (((command.Connection.State & global::System.Data.ConnectionState.Open) 

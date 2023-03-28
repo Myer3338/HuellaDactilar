@@ -16,5 +16,12 @@ namespace ControlEntrada
         {
             InitializeComponent();
         }
+
+        private void ModuloEditarPersona_Load(object sender, EventArgs e)
+        {
+            // TODO: esta línea de código carga datos en la tabla 'dataSet1.Personas' Puede moverla o quitarla según sea necesario.
+            this.personasTableAdapter.Fill(this.dataSet1.Personas);
+
+        }
     }
 }

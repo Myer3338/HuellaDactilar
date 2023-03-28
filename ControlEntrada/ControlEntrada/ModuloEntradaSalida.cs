@@ -29,13 +29,13 @@ namespace ControlEntrada
             this.Close();
         }
 
-        private void personasBindingNavigatorSaveItem_Click(object sender, EventArgs e)
-        {
-            this.Validate();
-            this.personasBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.dataSet1);
+        //private void personasBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        //{
+        //    this.Validate();
+        //    this.personasBindingSource.EndEdit();
+        //    this.tableAdapterManager.UpdateAll(this.dataSet1);
 
-        }
+        //}
 
         private void ModuloEntradaSalida_Load(object sender, EventArgs e)
         {
@@ -59,6 +59,7 @@ namespace ControlEntrada
             General.conexion.Open();
             SqlDataReader reader = command.ExecuteReader();
             cedula = string.Empty;
+            this.Resultado.Text = string.Empty;
             while (reader.Read())
             {
                 byte[] Huella = (byte[])reader["Huella"];
@@ -101,8 +102,7 @@ namespace ControlEntrada
             {
                 //traigo los datos de la tabla persona
                 this.personasTableAdapter.BuscarPersonaCedula(this.dataSet1.Personas, this.Resultado.Text);
-                this.label3.Visible= false;
-                this.label2.Text = DateTime.Now.ToString();
+                this.label3.Visible= false;                
                 GuardarInsertarRegistro();
             }
             else
@@ -119,10 +119,21 @@ namespace ControlEntrada
             this.registrosTableAdapter.BuscarUltimaEntrada(this.dataSet1.Registros, Convert.ToInt32(this.idPersonaTextBox.Text));
             if (string.IsNullOrEmpty(this.idRegistroEntrada.Text))
             {
-               this.registrosTableAdapter.GuardarRegistroEntradaSalida(Convert.ToInt32(this.idPersonaTextBox.Text), DateTime.Now, "A", null, "I", this.Resultado.Text, "Prueba");
+               this.registrosTableAdapter.GuardarRegistroEntrada(Convert.ToInt32(this.idPersonaTextBox.Text), DateTime.Now, "A", this.Resultado.Text, "Prueba");
+                this.label2.Text = DateTime.Now.ToString();
+                this.label3.Visible = true;
+                this.label2.Visible = true;
+                this.label3.Text = "Ingreso";
+                return;
+
             } else
             {
-                this.registrosTableAdapter.ActualizarSalida(DateTime.Now, "A", Convert.ToInt32(this.idRegistroEntrada.Text));
+                this.registrosTableAdapter.ActualizarSalida (DateTime.Now, "I", Convert.ToInt32(this.idRegistroEntrada.Text));
+                this.label2.Text = DateTime.Now.ToString();
+                this.label3.Visible = true;
+                this.label2.Visible = true;
+                this.label3.Text = "Salida";
+                return;
             }
         }
 
