@@ -66,8 +66,21 @@ namespace ControlEntrada
 
         private void editarPersona_Click(object sender, EventArgs e)
         {
-            ModuloEditarPersona editarPersona = new ModuloEditarPersona();
-            editarPersona.ShowDialog();
+            if (string.IsNullOrEmpty(Globales.Ced))
+            {
+                MessageBox.Show("Por favor seleccione el registro a editar", "Notificacion");
+            }
+            else
+            {
+                ModuloEditarPersona editarPersona = new ModuloEditarPersona();
+                DialogResult result = editarPersona.ShowDialog();
+
+                if (result == DialogResult.Cancel)
+                {
+                    this.personasTableAdapter.Fill(this.dataSet1.Personas);
+                }
+            }
+            Globales.Ced = string.Empty;           
         }
 
         private void EliminarPersona_Click(object sender, EventArgs e)
@@ -103,6 +116,17 @@ namespace ControlEntrada
             {
                 Globales.Ced = (personasDataGridView.Rows[e.RowIndex].Cells[2].Value.ToString());
             }
+        }
+
+        private void Buscar_TextChanged(object sender, EventArgs e)
+        {
+            this.personasTableAdapter.BusquedaIndexada(this.dataSet1.Personas, this.Buscar.Text, this.Buscar.Text,
+               this.Buscar.Text, this.Buscar.Text, this.Buscar.Text);
+        }
+
+        private void Personal_Click(object sender, EventArgs e)
+        {
+            this.personasTableAdapter.Fill(this.dataSet1.Personas);
         }
     }
 }

@@ -118,13 +118,20 @@ namespace Logica
             ICryptoTransform cTransform =
             tdes.CreateDecryptor();
 
-            byte[] resultArray =
-            cTransform.TransformFinalBlock(Array_a_Descifrar,
-            0, Array_a_Descifrar.Length);
+            try
+            {
+                byte[] resultArray =
+                   cTransform.TransformFinalBlock(Array_a_Descifrar,
+                   0, Array_a_Descifrar.Length);
 
-            tdes.Clear();
-            //se regresa en forma de cadena
-            return UTF8Encoding.UTF8.GetString(resultArray);
+                tdes.Clear();
+                //se regresa en forma de cadena
+                return UTF8Encoding.UTF8.GetString(resultArray);
+            }
+            catch (Exception)
+            {
+                return null;
+            }
         }
 
         //public static string Encriptar1(string texto)

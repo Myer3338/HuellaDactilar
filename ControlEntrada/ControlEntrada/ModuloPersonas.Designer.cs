@@ -45,8 +45,6 @@
             this.enrollmentControl1 = new DPFP.Gui.Enrollment.EnrollmentControl();
             this.personasBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
-            this.personasBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dataSet1 = new ControlEntrada.DataSet1();
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
@@ -72,10 +70,12 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.huellaPictureBox = new System.Windows.Forms.PictureBox();
             this.personasDataGridView = new System.Windows.Forms.DataGridView();
+            this.fotoPictureBox = new System.Windows.Forms.PictureBox();
+            this.personasBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataSet1 = new ControlEntrada.DataSet1();
             this.personasTableAdapter = new ControlEntrada.DataSet1TableAdapters.PersonasTableAdapter();
             this.tableAdapterManager = new ControlEntrada.DataSet1TableAdapters.TableAdapterManager();
-            this.fotoPictureBox = new System.Windows.Forms.PictureBox();
-            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.Foto = new System.Windows.Forms.DataGridViewImageColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -94,12 +94,12 @@
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.personasBindingNavigator)).BeginInit();
             this.personasBindingNavigator.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.personasBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.huellaPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.personasDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fotoPictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.personasBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).BeginInit();
             this.SuspendLayout();
             // 
             // idPersonaLabel
@@ -273,16 +273,6 @@
             this.bindingNavigatorAddNewItem.Text = "Agregar nuevo";
             this.bindingNavigatorAddNewItem.Click += new System.EventHandler(this.bindingNavigatorAddNewItem_Click);
             // 
-            // personasBindingSource
-            // 
-            this.personasBindingSource.DataMember = "Personas";
-            this.personasBindingSource.DataSource = this.dataSet1;
-            // 
-            // dataSet1
-            // 
-            this.dataSet1.DataSetName = "DataSet1";
-            this.dataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // bindingNavigatorCountItem
             // 
             this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
@@ -383,6 +373,7 @@
             this.Buscar.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.Buscar.Name = "Buscar";
             this.Buscar.Size = new System.Drawing.Size(100, 25);
+            this.Buscar.TextChanged += new System.EventHandler(this.Buscar_TextChanged);
             // 
             // toolStripSeparator2
             // 
@@ -487,7 +478,7 @@
             this.personasDataGridView.BackgroundColor = System.Drawing.Color.White;
             this.personasDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.personasDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewImageColumn1,
+            this.Foto,
             this.dataGridViewTextBoxColumn2,
             this.dataGridViewTextBoxColumn3,
             this.dataGridViewTextBoxColumn4,
@@ -502,6 +493,27 @@
             this.personasDataGridView.TabIndex = 30;
             this.personasDataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.personasDataGridView_CellClick);
             // 
+            // fotoPictureBox
+            // 
+            this.fotoPictureBox.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.fotoPictureBox.DataBindings.Add(new System.Windows.Forms.Binding("Image", this.personasBindingSource, "Foto", true));
+            this.fotoPictureBox.Location = new System.Drawing.Point(531, 134);
+            this.fotoPictureBox.Name = "fotoPictureBox";
+            this.fotoPictureBox.Size = new System.Drawing.Size(204, 194);
+            this.fotoPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.fotoPictureBox.TabIndex = 15;
+            this.fotoPictureBox.TabStop = false;
+            // 
+            // personasBindingSource
+            // 
+            this.personasBindingSource.DataMember = "Personas";
+            this.personasBindingSource.DataSource = this.dataSet1;
+            // 
+            // dataSet1
+            // 
+            this.dataSet1.DataSetName = "DataSet1";
+            this.dataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // personasTableAdapter
             // 
             this.personasTableAdapter.ClearBeforeFill = true;
@@ -514,22 +526,13 @@
             this.tableAdapterManager.UpdateOrder = ControlEntrada.DataSet1TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             this.tableAdapterManager.UsuariosTableAdapter = null;
             // 
-            // fotoPictureBox
+            // Foto
             // 
-            this.fotoPictureBox.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.fotoPictureBox.DataBindings.Add(new System.Windows.Forms.Binding("Image", this.personasBindingSource, "Foto", true));
-            this.fotoPictureBox.Location = new System.Drawing.Point(531, 134);
-            this.fotoPictureBox.Name = "fotoPictureBox";
-            this.fotoPictureBox.Size = new System.Drawing.Size(204, 194);
-            this.fotoPictureBox.TabIndex = 15;
-            this.fotoPictureBox.TabStop = false;
-            // 
-            // dataGridViewImageColumn1
-            // 
-            this.dataGridViewImageColumn1.DataPropertyName = "Foto";
-            this.dataGridViewImageColumn1.HeaderText = "Foto";
-            this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
-            this.dataGridViewImageColumn1.ReadOnly = true;
+            this.Foto.DataPropertyName = "Foto";
+            this.Foto.HeaderText = "Foto";
+            this.Foto.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.Foto.Name = "Foto";
+            this.Foto.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn2
             // 
@@ -605,18 +608,19 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ModuloPersonas";
             this.Load += new System.EventHandler(this.Personal_Load);
+            this.Click += new System.EventHandler(this.Personal_Click);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.personasBindingNavigator)).EndInit();
             this.personasBindingNavigator.ResumeLayout(false);
             this.personasBindingNavigator.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.personasBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.huellaPictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.personasDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fotoPictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.personasBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -659,7 +663,7 @@
         private System.Windows.Forms.ToolStripButton EliminarPersona;
         private System.Windows.Forms.ToolStripButton Imprimir;
         public DataSet1TableAdapters.PersonasTableAdapter personasTableAdapter;
-        private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn1;
+        private System.Windows.Forms.DataGridViewImageColumn Foto;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;

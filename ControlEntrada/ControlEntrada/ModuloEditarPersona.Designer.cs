@@ -34,11 +34,11 @@
             System.Windows.Forms.Label primerApellidoLabel;
             System.Windows.Forms.Label segundoApellidoLabel;
             System.Windows.Forms.Label fichaLabel;
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ModuloEditarPersona));
             System.Windows.Forms.Label idPersonaLabel1;
             System.Windows.Forms.Label huellaLabel1;
             System.Windows.Forms.Label noDedoLabel1;
             System.Windows.Forms.Label fotoLabel;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ModuloEditarPersona));
             this.BEliminar = new System.Windows.Forms.PictureBox();
             this.BFoto = new System.Windows.Forms.PictureBox();
             this.buttonCancelar = new System.Windows.Forms.Button();
@@ -47,17 +47,18 @@
             this.personasBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.personasTableAdapter = new ControlEntrada.DataSet1TableAdapters.PersonasTableAdapter();
             this.tableAdapterManager = new ControlEntrada.DataSet1TableAdapters.TableAdapterManager();
-            this.idPersonaTextBox1 = new System.Windows.Forms.TextBox();
+            this.idPersonaTextBox = new System.Windows.Forms.TextBox();
             this.fotoPictureBox = new System.Windows.Forms.PictureBox();
             this.cedulaTextBox = new System.Windows.Forms.TextBox();
             this.nombreTextBox = new System.Windows.Forms.TextBox();
             this.primerApellidoTextBox = new System.Windows.Forms.TextBox();
             this.segundoApellidoTextBox = new System.Windows.Forms.TextBox();
             this.fichaTextBox = new System.Windows.Forms.TextBox();
-            this.huellaPictureBox1 = new System.Windows.Forms.PictureBox();
-            this.noDedoTextBox1 = new System.Windows.Forms.TextBox();
+            this.huellaPictureBox = new System.Windows.Forms.PictureBox();
+            this.noDedoTextBox = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.enrollmentControl1 = new DPFP.Gui.Enrollment.EnrollmentControl();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             cedulaLabel = new System.Windows.Forms.Label();
             nombreLabel = new System.Windows.Forms.Label();
             primerApellidoLabel = new System.Windows.Forms.Label();
@@ -72,7 +73,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.personasBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fotoPictureBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.huellaPictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.huellaPictureBox)).BeginInit();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -121,23 +122,61 @@
             fichaLabel.TabIndex = 35;
             fichaLabel.Text = "Ficha:";
             // 
+            // idPersonaLabel1
+            // 
+            idPersonaLabel1.AutoSize = true;
+            idPersonaLabel1.Location = new System.Drawing.Point(23, 4);
+            idPersonaLabel1.Name = "idPersonaLabel1";
+            idPersonaLabel1.Size = new System.Drawing.Size(61, 13);
+            idPersonaLabel1.TabIndex = 41;
+            idPersonaLabel1.Text = "Id Persona:";
+            // 
+            // huellaLabel1
+            // 
+            huellaLabel1.AutoSize = true;
+            huellaLabel1.Location = new System.Drawing.Point(23, 21);
+            huellaLabel1.Name = "huellaLabel1";
+            huellaLabel1.Size = new System.Drawing.Size(40, 13);
+            huellaLabel1.TabIndex = 55;
+            huellaLabel1.Text = "Huella:";
+            // 
+            // noDedoLabel1
+            // 
+            noDedoLabel1.AutoSize = true;
+            noDedoLabel1.Location = new System.Drawing.Point(23, 80);
+            noDedoLabel1.Name = "noDedoLabel1";
+            noDedoLabel1.Size = new System.Drawing.Size(53, 13);
+            noDedoLabel1.TabIndex = 57;
+            noDedoLabel1.Text = "No Dedo:";
+            // 
+            // fotoLabel
+            // 
+            fotoLabel.AutoSize = true;
+            fotoLabel.Location = new System.Drawing.Point(511, 49);
+            fotoLabel.Name = "fotoLabel";
+            fotoLabel.Size = new System.Drawing.Size(31, 13);
+            fotoLabel.TabIndex = 25;
+            fotoLabel.Text = "Foto:";
+            // 
             // BEliminar
             // 
             this.BEliminar.Image = ((System.Drawing.Image)(resources.GetObject("BEliminar.Image")));
-            this.BEliminar.Location = new System.Drawing.Point(741, 162);
+            this.BEliminar.Location = new System.Drawing.Point(735, 162);
             this.BEliminar.Name = "BEliminar";
             this.BEliminar.Size = new System.Drawing.Size(51, 52);
             this.BEliminar.TabIndex = 41;
             this.BEliminar.TabStop = false;
+            this.BEliminar.Click += new System.EventHandler(this.BEliminar_Click);
             // 
             // BFoto
             // 
             this.BFoto.Image = ((System.Drawing.Image)(resources.GetObject("BFoto.Image")));
-            this.BFoto.Location = new System.Drawing.Point(741, 91);
+            this.BFoto.Location = new System.Drawing.Point(735, 91);
             this.BFoto.Name = "BFoto";
             this.BFoto.Size = new System.Drawing.Size(51, 52);
             this.BFoto.TabIndex = 40;
             this.BFoto.TabStop = false;
+            this.BFoto.Click += new System.EventHandler(this.BFoto_Click);
             // 
             // buttonCancelar
             // 
@@ -147,6 +186,7 @@
             this.buttonCancelar.TabIndex = 39;
             this.buttonCancelar.Text = "Cancelar";
             this.buttonCancelar.UseVisualStyleBackColor = true;
+            this.buttonCancelar.Click += new System.EventHandler(this.buttonCancelar_Click);
             // 
             // BtnAgregar
             // 
@@ -156,6 +196,7 @@
             this.BtnAgregar.TabIndex = 38;
             this.BtnAgregar.Text = "Guardar";
             this.BtnAgregar.UseVisualStyleBackColor = true;
+            this.BtnAgregar.Click += new System.EventHandler(this.BtnAgregar_Click);
             // 
             // dataSet1
             // 
@@ -179,30 +220,21 @@
             this.tableAdapterManager.UpdateOrder = ControlEntrada.DataSet1TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             this.tableAdapterManager.UsuariosTableAdapter = null;
             // 
-            // idPersonaLabel1
+            // idPersonaTextBox
             // 
-            idPersonaLabel1.AutoSize = true;
-            idPersonaLabel1.Location = new System.Drawing.Point(23, 4);
-            idPersonaLabel1.Name = "idPersonaLabel1";
-            idPersonaLabel1.Size = new System.Drawing.Size(61, 13);
-            idPersonaLabel1.TabIndex = 41;
-            idPersonaLabel1.Text = "Id Persona:";
-            // 
-            // idPersonaTextBox1
-            // 
-            this.idPersonaTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.personasBindingSource, "IdPersona", true));
-            this.idPersonaTextBox1.Location = new System.Drawing.Point(122, 1);
-            this.idPersonaTextBox1.Name = "idPersonaTextBox1";
-            this.idPersonaTextBox1.Size = new System.Drawing.Size(100, 20);
-            this.idPersonaTextBox1.TabIndex = 42;
+            this.idPersonaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.personasBindingSource, "IdPersona", true));
+            this.idPersonaTextBox.Location = new System.Drawing.Point(122, 1);
+            this.idPersonaTextBox.Name = "idPersonaTextBox";
+            this.idPersonaTextBox.Size = new System.Drawing.Size(100, 20);
+            this.idPersonaTextBox.TabIndex = 42;
             // 
             // fotoPictureBox
             // 
             this.fotoPictureBox.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.fotoPictureBox.DataBindings.Add(new System.Windows.Forms.Binding("Image", this.personasBindingSource, "Foto", true));
-            this.fotoPictureBox.Location = new System.Drawing.Point(525, 65);
+            this.fotoPictureBox.Location = new System.Drawing.Point(514, 65);
             this.fotoPictureBox.Name = "fotoPictureBox";
-            this.fotoPictureBox.Size = new System.Drawing.Size(210, 152);
+            this.fotoPictureBox.Size = new System.Drawing.Size(204, 184);
             this.fotoPictureBox.TabIndex = 44;
             this.fotoPictureBox.TabStop = false;
             // 
@@ -246,62 +278,35 @@
             this.fichaTextBox.Size = new System.Drawing.Size(131, 20);
             this.fichaTextBox.TabIndex = 54;
             // 
-            // huellaLabel1
+            // huellaPictureBox
             // 
-            huellaLabel1.AutoSize = true;
-            huellaLabel1.Location = new System.Drawing.Point(23, 21);
-            huellaLabel1.Name = "huellaLabel1";
-            huellaLabel1.Size = new System.Drawing.Size(40, 13);
-            huellaLabel1.TabIndex = 55;
-            huellaLabel1.Text = "Huella:";
+            this.huellaPictureBox.DataBindings.Add(new System.Windows.Forms.Binding("Image", this.personasBindingSource, "Huella", true));
+            this.huellaPictureBox.Location = new System.Drawing.Point(122, 21);
+            this.huellaPictureBox.Name = "huellaPictureBox";
+            this.huellaPictureBox.Size = new System.Drawing.Size(100, 50);
+            this.huellaPictureBox.TabIndex = 56;
+            this.huellaPictureBox.TabStop = false;
             // 
-            // huellaPictureBox1
+            // noDedoTextBox
             // 
-            this.huellaPictureBox1.DataBindings.Add(new System.Windows.Forms.Binding("Image", this.personasBindingSource, "Huella", true));
-            this.huellaPictureBox1.Location = new System.Drawing.Point(122, 21);
-            this.huellaPictureBox1.Name = "huellaPictureBox1";
-            this.huellaPictureBox1.Size = new System.Drawing.Size(100, 50);
-            this.huellaPictureBox1.TabIndex = 56;
-            this.huellaPictureBox1.TabStop = false;
-            // 
-            // noDedoLabel1
-            // 
-            noDedoLabel1.AutoSize = true;
-            noDedoLabel1.Location = new System.Drawing.Point(23, 80);
-            noDedoLabel1.Name = "noDedoLabel1";
-            noDedoLabel1.Size = new System.Drawing.Size(53, 13);
-            noDedoLabel1.TabIndex = 57;
-            noDedoLabel1.Text = "No Dedo:";
-            // 
-            // noDedoTextBox1
-            // 
-            this.noDedoTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.personasBindingSource, "NoDedo", true));
-            this.noDedoTextBox1.Location = new System.Drawing.Point(122, 77);
-            this.noDedoTextBox1.Name = "noDedoTextBox1";
-            this.noDedoTextBox1.Size = new System.Drawing.Size(100, 20);
-            this.noDedoTextBox1.TabIndex = 58;
+            this.noDedoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.personasBindingSource, "NoDedo", true));
+            this.noDedoTextBox.Location = new System.Drawing.Point(122, 77);
+            this.noDedoTextBox.Name = "noDedoTextBox";
+            this.noDedoTextBox.Size = new System.Drawing.Size(100, 20);
+            this.noDedoTextBox.TabIndex = 58;
             // 
             // panel2
             // 
             this.panel2.Controls.Add(idPersonaLabel1);
-            this.panel2.Controls.Add(this.idPersonaTextBox1);
+            this.panel2.Controls.Add(this.idPersonaTextBox);
             this.panel2.Controls.Add(huellaLabel1);
-            this.panel2.Controls.Add(this.huellaPictureBox1);
+            this.panel2.Controls.Add(this.huellaPictureBox);
             this.panel2.Controls.Add(noDedoLabel1);
-            this.panel2.Controls.Add(this.noDedoTextBox1);
-            this.panel2.Location = new System.Drawing.Point(525, 12);
+            this.panel2.Controls.Add(this.noDedoTextBox);
+            this.panel2.Location = new System.Drawing.Point(514, 12);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(15, 14);
+            this.panel2.Size = new System.Drawing.Size(14, 16);
             this.panel2.TabIndex = 59;
-            // 
-            // fotoLabel
-            // 
-            fotoLabel.AutoSize = true;
-            fotoLabel.Location = new System.Drawing.Point(522, 49);
-            fotoLabel.Name = "fotoLabel";
-            fotoLabel.Size = new System.Drawing.Size(31, 13);
-            fotoLabel.TabIndex = 25;
-            fotoLabel.Text = "Foto:";
             // 
             // enrollmentControl1
             // 
@@ -310,15 +315,22 @@
             this.enrollmentControl1.Location = new System.Drawing.Point(-1, 0);
             this.enrollmentControl1.MaxEnrollFingerCount = 10;
             this.enrollmentControl1.Name = "enrollmentControl1";
-            this.enrollmentControl1.ReaderSerialNumber = null;
+            this.enrollmentControl1.ReaderSerialNumber = "00000000-0000-0000-0000-000000000000";
             this.enrollmentControl1.Size = new System.Drawing.Size(492, 314);
             this.enrollmentControl1.TabIndex = 60;
+            this.enrollmentControl1.OnDelete += new DPFP.Gui.Enrollment.EnrollmentControl._OnDelete(this.enrollmentControl1_OnDelete);
+            this.enrollmentControl1.OnEnroll += new DPFP.Gui.Enrollment.EnrollmentControl._OnEnroll(this.enrollmentControl1_OnEnroll);
+            this.enrollmentControl1.OnStartEnroll += new DPFP.Gui.Enrollment.EnrollmentControl._OnStartEnroll(this.enrollmentControl1_OnStartEnroll);
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
             // 
             // ModuloEditarPersona
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(809, 460);
+            this.ClientSize = new System.Drawing.Size(799, 461);
             this.Controls.Add(this.enrollmentControl1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.fotoPictureBox);
@@ -337,7 +349,11 @@
             this.Controls.Add(primerApellidoLabel);
             this.Controls.Add(segundoApellidoLabel);
             this.Controls.Add(fichaLabel);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "ModuloEditarPersona";
+            this.ShowIcon = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ModuloEditarPersona";
             this.Load += new System.EventHandler(this.ModuloEditarPersona_Load);
             ((System.ComponentModel.ISupportInitialize)(this.BEliminar)).EndInit();
@@ -345,7 +361,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.personasBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fotoPictureBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.huellaPictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.huellaPictureBox)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.ResumeLayout(false);
@@ -361,11 +377,7 @@
         private System.Windows.Forms.Button BtnAgregar;
         private DataSet1 dataSet1;
         private System.Windows.Forms.BindingSource personasBindingSource;
-        private DataSet1TableAdapters.PersonasTableAdapter personasTableAdapter;
         private DataSet1TableAdapters.TableAdapterManager tableAdapterManager;
-        private System.Windows.Forms.TextBox idPersonaTextBox1;
-        private System.Windows.Forms.PictureBox huellaPictureBox1;
-        private System.Windows.Forms.TextBox noDedoTextBox1;
         private System.Windows.Forms.Panel panel2;
         public System.Windows.Forms.PictureBox fotoPictureBox;
         public System.Windows.Forms.TextBox cedulaTextBox;
@@ -374,5 +386,10 @@
         public System.Windows.Forms.TextBox segundoApellidoTextBox;
         public System.Windows.Forms.TextBox fichaTextBox;
         private DPFP.Gui.Enrollment.EnrollmentControl enrollmentControl1;
+        public System.Windows.Forms.TextBox idPersonaTextBox;
+        public System.Windows.Forms.PictureBox huellaPictureBox;
+        public System.Windows.Forms.TextBox noDedoTextBox;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        public DataSet1TableAdapters.PersonasTableAdapter personasTableAdapter;
     }
 }

@@ -138,6 +138,12 @@
     <Compile Include="ModuloReportes.Designer.cs">
       <DependentUpon>ModuloReportes.cs</DependentUpon>
     </Compile>
+    <Compile Include="ModuloTodos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModuloTodos.Designer.cs">
+      <DependentUpon>ModuloTodos.cs</DependentUpon>
+    </Compile>
     <Compile Include="ModuloUsuarios.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -169,6 +175,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ModuloReportes.resx">
       <DependentUpon>ModuloReportes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModuloTodos.resx">
+      <DependentUpon>ModuloTodos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ModuloUsuarios.resx">
       <DependentUpon>ModuloUsuarios.cs</DependentUpon>

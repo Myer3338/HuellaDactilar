@@ -119,7 +119,7 @@ namespace ControlEntrada
             this.registrosTableAdapter.BuscarUltimaEntrada(this.dataSet1.Registros, Convert.ToInt32(this.idPersonaTextBox.Text));
             if (string.IsNullOrEmpty(this.idRegistroEntrada.Text))
             {
-               this.registrosTableAdapter.GuardarRegistroEntrada(Convert.ToInt32(this.idPersonaTextBox.Text), DateTime.Now, "A", this.Resultado.Text, "Prueba");
+               this.registrosTableAdapter.GuardarRegistroEntrada(Convert.ToInt32(this.idPersonaTextBox.Text), DateTime.Now, "A", this.Resultado.Text, "Invitado");
                 this.label2.Text = DateTime.Now.ToString();
                 this.label3.Visible = true;
                 this.label2.Visible = true;

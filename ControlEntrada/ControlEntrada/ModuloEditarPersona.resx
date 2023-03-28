@@ -132,11 +132,23 @@
   <metadata name="fichaLabel.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
   </metadata>
+  <metadata name="idPersonaLabel1.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="huellaLabel1.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="noDedoLabel1.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="fotoLabel.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="BEliminar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vgAADr4B6kKxwAAAC69JREFUaEPNWAlYVdUWxnoNz0QE08qn+Z5iIjFcZFAEGS+DMiOTjCFN9spnalmf
+        vAAADrwBlbxySQAAC69JREFUaEPNWAlYVdUWxnoNz0QE08qn+Z5iIjFcZFAEGS+DMiOTjCFN9spnalmf
         5VWZ5QoyXRkug/cyIwgIKCAFThgpCqaGQmraa7BQtAJU7nprHfYlUCiwF/h/3/+dffawzv/vtfY5FxT+
         AjzuYcTTDrA2/OBVR/Ok150tM+jqb224wXXRgnlszqMHvu4cJVcT/U2e1ibtgXam9wJsjMDHQh+8zXS5
         a4CtMQTam90NWG5S5WmkbcaWPRrwM1to42NtdM3dzACsF6qD2xINpOaQ9DTRAV9ro96V5gZSWwPVySzE
@@ -192,7 +204,7 @@
   <data name="BFoto.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vgAADr4B6kKxwAAACn5JREFUaEPNmAtc1FUWxy13rW23bLdN2x7rpu6mBM7gzIAIMrwElPdDUMEH0dbH
+        vAAADrwBlbxySQAACn5JREFUaEPNmAtc1FUWxy13rW23bLdN2x7rpu6mBM7gzIAIMrwElPdDUMEH0dbH
         1rLUMqOcNgPkEYrA8Jjh4QzvlwMKikCCCCgZyiCPASY1LWtLFCoF1Dmd858/hA4kbDp4Pp/v53//93/v
         ued3z7n//8Cke2CTfcy5nDX2Zu++7Gqd8Iq7bSpdV9ubbfY0nftPdsz9Z3a8mVM9LQVBvvaW6gAn4Y01
         DubgZyOAlVY85rrG0QICnK2ur1lqWeZrzrFip90ftspqvoOfvfmFZVYmYD/fALwXGiJGI+JraQz+9uY3
@@ -252,19 +264,10 @@
   <metadata name="tableAdapterManager.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>469, 17</value>
   </metadata>
-  <metadata name="idPersonaLabel1.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>False</value>
-  </metadata>
-  <metadata name="huellaLabel1.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>False</value>
-  </metadata>
-  <metadata name="noDedoLabel1.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>False</value>
-  </metadata>
-  <metadata name="fotoLabel.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>False</value>
+  <metadata name="openFileDialog1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>640, 17</value>
   </metadata>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>45</value>
+    <value>25</value>
   </metadata>
 </root>

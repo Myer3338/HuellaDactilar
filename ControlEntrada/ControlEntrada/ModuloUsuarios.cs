@@ -311,7 +311,8 @@ namespace ControlEntrada
         private void BTodosRegistros_Click(object sender, EventArgs e)
         {
             Globales.VerificarRegisstros(this);
-            this.MoveFirstItem.PerformClick();
+            ModuloTodos todos = new ModuloTodos();
+            todos.ShowDialog();
         }
 
         private void BEliminarFoto_Click(object sender, EventArgs e)

@@ -275,7 +275,7 @@
             this.panel1.Controls.Add(this.noDedoTextBox);
             this.panel1.Location = new System.Drawing.Point(565, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(10, 17);
+            this.panel1.Size = new System.Drawing.Size(10, 10);
             this.panel1.TabIndex = 19;
             // 
             // BtnAgregar

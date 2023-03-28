@@ -180,6 +180,14 @@ namespace ControlEntrada
             }
             x.noDedoTextBox.Text = "0";
         }
+        public static void LimpiarHuellaEditar(ModuloEditarPersona x)
+        {
+            for (int i = 0; i < 10; i++)
+            {
+                x.Data.Templates[i] = null;
+            }
+            x.noDedoTextBox.Text = "0";
+        }
         public static void GuardarPersona(ModuloAgregarPersona x)
         {
             try
@@ -200,7 +208,7 @@ namespace ControlEntrada
                 //throw;
             }
         }
-        public static void ModificarPersona(ModuloAgregarPersona x)
+        public static void ModificarPersona(ModuloEditarPersona x)
         {
             try
             {
