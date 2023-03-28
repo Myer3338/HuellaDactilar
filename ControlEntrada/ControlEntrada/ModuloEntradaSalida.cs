@@ -39,8 +39,11 @@ namespace ControlEntrada
 
         private void ModuloEntradaSalida_Load(object sender, EventArgs e)
         {
+            // TODO: esta línea de código carga datos en la tabla 'dataSet1.Registros' Puede moverla o quitarla según sea necesario.
+            this.registrosTableAdapter.Fill(this.dataSet1.Registros);
             // TODO: esta línea de código carga datos en la tabla 'dataSet1.Personas' Puede moverla o quitarla según sea necesario.
-            this.personasTableAdapter.Fill(this.dataSet1.Personas);
+            //this.personasTableAdapter.Fill(this.dataSet1.Personas);
+
 
         }
 
@@ -81,7 +84,7 @@ namespace ControlEntrada
             {
                 EventHandlerStatus = DPFP.Gui.EventHandlerStatus.Failure;
                 this.personasTableAdapter.BuscarIdPersona(this.dataSet1.Personas, -1);// limpiar data source
-                this.Resultado.Text = "-1";
+                this.Resultado.Text = "error";
                 //MessageBox.Show("Mal");
             }
         }
@@ -93,18 +96,35 @@ namespace ControlEntrada
 
         public void buscar_registro() 
         {
-            if (!(string.IsNullOrEmpty(this.Resultado.Text)))
+            
+            if (!(string.IsNullOrEmpty(this.Resultado.Text)) && (this.Resultado.Text != "error"))
             {
                 //traigo los datos de la tabla persona
                 this.personasTableAdapter.BuscarPersonaCedula(this.dataSet1.Personas, this.Resultado.Text);
-                this.label2.Text = DateTime .Now.ToShortDateString();
+                this.label3.Visible= false;
+                this.label2.Text = DateTime.Now.ToString();
+                GuardarInsertarRegistro();
             }
             else
             {
                 //usuario no registrado en la tabla registro, por que la cedula o nis no existe
+                this.label2.Visible = false;
                 this.label3.Visible = true;
                 this.label3.Text = "Persona no registrada, no existe en la BD";
             }
         }
+
+        private void GuardarInsertarRegistro()
+        {
+            this.registrosTableAdapter.BuscarUltimaEntrada(this.dataSet1.Registros, Convert.ToInt32(this.idPersonaTextBox.Text));
+            if (string.IsNullOrEmpty(this.idRegistroEntrada.Text))
+            {
+               this.registrosTableAdapter.GuardarRegistroEntradaSalida(Convert.ToInt32(this.idPersonaTextBox.Text), DateTime.Now, "A", null, "I", this.Resultado.Text, "Prueba");
+            } else
+            {
+                this.registrosTableAdapter.ActualizarSalida(DateTime.Now, "A", Convert.ToInt32(this.idRegistroEntrada.Text));
+            }
+        }
+
     }
 }

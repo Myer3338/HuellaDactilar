@@ -27,3 +27,4 @@ C:\Huella\proyectoHuellaDactilar\ControlEntrada\ControlEntrada\bin\Debug\DPFPEng
 C:\Huella\proyectoHuellaDactilar\ControlEntrada\ControlEntrada\bin\Debug\DPFPGuiNET.dll
 C:\Huella\proyectoHuellaDactilar\ControlEntrada\ControlEntrada\bin\Debug\DPFPShrNET.dll
 C:\Huella\proyectoHuellaDactilar\ControlEntrada\ControlEntrada\bin\Debug\DPFPVerNET.dll
+C:\Huella\proyectoHuellaDactilar\ControlEntrada\ControlEntrada\obj\Debug\ControlEntrada.ModuloEditarPersona.resources

@@ -13,29 +13,22 @@ namespace ControlEntrada
 {
     public partial class ModuloAgregarPersona : Form
     {
+        public AppData Data;
+        public int i;
+
         public ModuloAgregarPersona()
         {
             InitializeComponent();
             Data = new AppData();
         }
-        public AppData Data;
-        public int i;
+        
+        //private void personasBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        //{
+        //    this.Validate();
+        //    this.personasBindingSource.EndEdit();
+        //    this.tableAdapterManager.UpdateAll(this.dataSet1);
 
-        private void personasBindingNavigatorSaveItem_Click(object sender, EventArgs e)
-        {
-            this.Validate();
-            this.personasBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.dataSet1);
-
-        }
-
-        private void personasBindingNavigatorSaveItem_Click_1(object sender, EventArgs e)
-        {
-            this.Validate();
-            this.personasBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.dataSet1);
-
-        }
+        //}       
 
         private void ModuloAgregarPersona_Load(object sender, EventArgs e)
         {
@@ -66,8 +59,8 @@ namespace ControlEntrada
             if (Data.IsEventHandlerSucceeds)
             {
                 Globales.LimpiarHuella(this);
-                Data.Templates[FingerMask - 1] = Template; //store a finger template
-                                                            //ListEvent.Items(0,String.Format("OnEnroll: finger {0}",Finger));
+                Data.Templates[FingerMask - 1] = Template; //store a finger 
+                //ListEvent.Items(0,String.Format("OnEnroll: finger {0}",Finger));
             }
             else
             {
@@ -168,7 +161,9 @@ namespace ControlEntrada
                                                 {
                                                     cantidadHuellas++;
                                                     this.noDedoTextBox.Text = (i + 1).ToString();
+                                                    this.i = i;
                                                     Globales.GuardarPersona(this);
+                                                    this.Close();
                                                 }
                                             }
                                             if (cantidadHuellas == 0)
@@ -176,6 +171,7 @@ namespace ControlEntrada
                                                 if (this.enrollmentControl1.EnrolledFingerMask != 0)
                                                 {
                                                     Globales.GuardarPersona(this);
+                                                    this.Close();
                                                 }
                                             }
                                         }
@@ -192,6 +188,7 @@ namespace ControlEntrada
                     }
                 }
             }
+            this.personasTableAdapter.Fill(this.dataSet1.Personas);
         }
     }
 }

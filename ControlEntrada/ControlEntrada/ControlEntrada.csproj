@@ -114,6 +114,12 @@
     <Compile Include="ModuloAgregarPersona.Designer.cs">
       <DependentUpon>ModuloAgregarPersona.cs</DependentUpon>
     </Compile>
+    <Compile Include="ModuloEditarPersona.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModuloEditarPersona.Designer.cs">
+      <DependentUpon>ModuloEditarPersona.cs</DependentUpon>
+    </Compile>
     <Compile Include="ModuloEntradaSalida.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -151,6 +157,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ModuloAgregarPersona.resx">
       <DependentUpon>ModuloAgregarPersona.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModuloEditarPersona.resx">
+      <DependentUpon>ModuloEditarPersona.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ModuloEntradaSalida.resx">
       <DependentUpon>ModuloEntradaSalida.cs</DependentUpon>

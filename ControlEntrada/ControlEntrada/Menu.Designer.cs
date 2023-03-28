@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Menu));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.mostrarRol = new System.Windows.Forms.Label();
             this.cerrar = new System.Windows.Forms.Button();
             this.labelMenu = new System.Windows.Forms.Label();
             this.AcercaDe = new System.Windows.Forms.PictureBox();
@@ -39,6 +40,7 @@
             this.btnRegEntradaSalida = new System.Windows.Forms.Button();
             this.btnReportes = new System.Windows.Forms.Button();
             this.panel = new System.Windows.Forms.Panel();
+            this.BtnCerrarSesion = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.AcercaDe)).BeginInit();
             this.panel.SuspendLayout();
@@ -47,6 +49,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(169)))), ((int)(((byte)(0)))));
+            this.panel1.Controls.Add(this.mostrarRol);
             this.panel1.Controls.Add(this.cerrar);
             this.panel1.Controls.Add(this.labelMenu);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -54,6 +57,17 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(705, 39);
             this.panel1.TabIndex = 0;
+            // 
+            // mostrarRol
+            // 
+            this.mostrarRol.AutoSize = true;
+            this.mostrarRol.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mostrarRol.ForeColor = System.Drawing.Color.White;
+            this.mostrarRol.Location = new System.Drawing.Point(277, 11);
+            this.mostrarRol.Name = "mostrarRol";
+            this.mostrarRol.Size = new System.Drawing.Size(51, 20);
+            this.mostrarRol.TabIndex = 22;
+            this.mostrarRol.Text = "label1";
             // 
             // cerrar
             // 
@@ -193,12 +207,32 @@
             this.panel.Size = new System.Drawing.Size(670, 255);
             this.panel.TabIndex = 7;
             // 
+            // BtnCerrarSesion
+            // 
+            this.BtnCerrarSesion.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.BtnCerrarSesion.AutoSize = true;
+            this.BtnCerrarSesion.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnCerrarSesion.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.BtnCerrarSesion.FlatAppearance.BorderSize = 0;
+            this.BtnCerrarSesion.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Plum;
+            this.BtnCerrarSesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnCerrarSesion.ForeColor = System.Drawing.Color.Black;
+            this.BtnCerrarSesion.Image = ((System.Drawing.Image)(resources.GetObject("BtnCerrarSesion.Image")));
+            this.BtnCerrarSesion.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.BtnCerrarSesion.Location = new System.Drawing.Point(639, 45);
+            this.BtnCerrarSesion.Name = "BtnCerrarSesion";
+            this.BtnCerrarSesion.Size = new System.Drawing.Size(54, 54);
+            this.BtnCerrarSesion.TabIndex = 21;
+            this.BtnCerrarSesion.UseVisualStyleBackColor = false;
+            this.BtnCerrarSesion.Click += new System.EventHandler(this.BtnCerrarSesion_Click);
+            // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(705, 506);
+            this.Controls.Add(this.BtnCerrarSesion);
             this.Controls.Add(this.panel);
             this.Controls.Add(this.labelMenu2);
             this.Controls.Add(this.AcercaDe);
@@ -229,5 +263,7 @@
         private System.Windows.Forms.Button btnReportes;
         private System.Windows.Forms.Button cerrar;
         private System.Windows.Forms.Panel panel;
+        private System.Windows.Forms.Button BtnCerrarSesion;
+        private System.Windows.Forms.Label mostrarRol;
     }
 }

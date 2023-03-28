@@ -194,7 +194,11 @@ namespace ControlEntrada
             {
                 this.contrasenaTextEdit.Text = Encriptar.Encriptar1(this.contrasenaTextEdit.Text);
             }
-            //devuelve los datos originales
+            else
+            {
+                return;
+            }
+            //devuelve los datos originales         
             if (Globales.TipoCrud == 1)
             {
                 this.id_UsuarioTextBox.Text = Globales.Id_usuario;
@@ -209,7 +213,7 @@ namespace ControlEntrada
                 this.Buscar.Text = this.cedulaTextBox.Text;
             }
             //se ubica en la posicion del registro modificado
-            this.UsuariosbindingSource.Position = this.UsuariosbindingSource.Find("Cedula", this.Buscar.Text);
+            this.usuariosBindingSource.Position = this.usuariosBindingSource.Find("Cedula", this.Buscar.Text);
             //para que el binding navigator se ubique bien
             this.Buscar.Text = null;
             this.bindingNavigatorPositionItem.Focus();
@@ -218,19 +222,22 @@ namespace ControlEntrada
 
         private void ModuloUsuarios_Load(object sender, EventArgs e)
         {
+          
+            // TODO: esta línea de código carga datos en la tabla 'dataSet1.Usuarios' Puede moverla o quitarla según sea necesario.
+            this.usuariosTableAdapter.TodosUsuarios(this.dataSet1.Usuarios);
             //Verificar si existe registro
             Globales.VerificarRegisstros(this);
-            if (this.UsuariosbindingSource.Count>0)
+            if (this.usuariosBindingSource.Count > 0)
             {
                 //integrar los componentes con los binding si existen registros
-                this.fotoPictureBox.DataBindings.Add(new System.Windows.Forms.Binding("Image", this.UsuariosbindingSource, "Foto", true));
-                this.id_UsuarioTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.UsuariosbindingSource, "IdUsuario", true));
-                this.cedulaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.UsuariosbindingSource, "Cedula", true));
-                this.nombreTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.UsuariosbindingSource, "Nombre", true));
-                this.correoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.UsuariosbindingSource, "Correo", true));
-                this.usuarioTtextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.UsuariosbindingSource, "Usuario", true));
-                this.contrasenaTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.UsuariosbindingSource, "Contrasena", true));
-                this.rolComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.UsuariosbindingSource, "Rol", true));
+                this.fotoPictureBox.DataBindings.Add(new System.Windows.Forms.Binding("Image", this.usuariosBindingSource, "Foto", true));
+                this.id_UsuarioTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usuariosBindingSource, "IdUsuario", true));
+                this.cedulaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usuariosBindingSource, "Cedula", true));
+                this.nombreTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usuariosBindingSource, "Nombre", true));
+                this.correoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usuariosBindingSource, "Correo", true));
+                this.usuarioTtextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usuariosBindingSource, "Usuario", true));
+                this.contrasenaTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usuariosBindingSource, "Contrasena", true));
+                this.rolComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usuariosBindingSource, "Rol", true));
                 this.MoveFirstItem.PerformClick();
             }
         }
@@ -312,5 +319,13 @@ namespace ControlEntrada
             this.fotoPictureBox.Image = null;
 
         }
+
+        //private void usuariosBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        //{
+        //    this.Validate();
+        //    this.usuariosBindingSource.EndEdit();
+        //    this.tableAdapterManager.UpdateAll(this.dataSet1);
+
+        //}     
     }
 }

@@ -38,6 +38,7 @@
             System.Windows.Forms.Label fichaLabel;
             System.Windows.Forms.Label huellaLabel;
             System.Windows.Forms.Label noDedoLabel;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ModuloAgregarPersona));
             this.enrollmentControl1 = new DPFP.Gui.Enrollment.EnrollmentControl();
             this.dataSet1 = new ControlEntrada.DataSet1();
             this.personasBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -202,7 +203,7 @@
             // 
             // fotoPictureBox
             // 
-            this.fotoPictureBox.DataBindings.Add(new System.Windows.Forms.Binding("Image", this.personasBindingSource, "Foto", true));
+            this.fotoPictureBox.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.fotoPictureBox.Location = new System.Drawing.Point(518, 56);
             this.fotoPictureBox.Name = "fotoPictureBox";
             this.fotoPictureBox.Size = new System.Drawing.Size(196, 171);
@@ -211,7 +212,6 @@
             // 
             // cedulaTextBox
             // 
-            this.cedulaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.personasBindingSource, "Cedula", true));
             this.cedulaTextBox.Location = new System.Drawing.Point(27, 360);
             this.cedulaTextBox.Name = "cedulaTextBox";
             this.cedulaTextBox.Size = new System.Drawing.Size(147, 20);
@@ -219,7 +219,6 @@
             // 
             // nombreTextBox
             // 
-            this.nombreTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.personasBindingSource, "Nombre", true));
             this.nombreTextBox.Location = new System.Drawing.Point(180, 360);
             this.nombreTextBox.Name = "nombreTextBox";
             this.nombreTextBox.Size = new System.Drawing.Size(147, 20);
@@ -227,7 +226,6 @@
             // 
             // primerApellidoTextBox
             // 
-            this.primerApellidoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.personasBindingSource, "PrimerApellido", true));
             this.primerApellidoTextBox.Location = new System.Drawing.Point(333, 360);
             this.primerApellidoTextBox.Name = "primerApellidoTextBox";
             this.primerApellidoTextBox.Size = new System.Drawing.Size(145, 20);
@@ -235,7 +233,6 @@
             // 
             // segundoApellidoTextBox
             // 
-            this.segundoApellidoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.personasBindingSource, "SegundoApellido", true));
             this.segundoApellidoTextBox.Location = new System.Drawing.Point(486, 360);
             this.segundoApellidoTextBox.Name = "segundoApellidoTextBox";
             this.segundoApellidoTextBox.Size = new System.Drawing.Size(147, 20);
@@ -243,7 +240,6 @@
             // 
             // fichaTextBox
             // 
-            this.fichaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.personasBindingSource, "Ficha", true));
             this.fichaTextBox.Location = new System.Drawing.Point(639, 360);
             this.fichaTextBox.Name = "fichaTextBox";
             this.fichaTextBox.Size = new System.Drawing.Size(132, 20);
@@ -303,6 +299,7 @@
             // 
             // BFoto
             // 
+            this.BFoto.Image = ((System.Drawing.Image)(resources.GetObject("BFoto.Image")));
             this.BFoto.Location = new System.Drawing.Point(734, 82);
             this.BFoto.Name = "BFoto";
             this.BFoto.Size = new System.Drawing.Size(51, 52);
@@ -312,6 +309,7 @@
             // 
             // BEliminar
             // 
+            this.BEliminar.Image = ((System.Drawing.Image)(resources.GetObject("BEliminar.Image")));
             this.BEliminar.Location = new System.Drawing.Point(734, 153);
             this.BEliminar.Name = "BEliminar";
             this.BEliminar.Size = new System.Drawing.Size(51, 52);

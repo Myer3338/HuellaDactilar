@@ -34,7 +34,9 @@
             this.cerrar = new System.Windows.Forms.Button();
             this.labelMenu = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.UsuariosNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.usuariosBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.usuariosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataSet1 = new ControlEntrada.DataSet1();
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.MoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.MovePreviousItem = new System.Windows.Forms.ToolStripButton();
@@ -74,16 +76,18 @@
             this.BFoto = new System.Windows.Forms.Button();
             this.fotoPictureBox = new System.Windows.Forms.PictureBox();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.UsuariosbindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.usuariosTableAdapter = new ControlEntrada.DataSet1TableAdapters.UsuariosTableAdapter();
+            this.tableAdapterManager = new ControlEntrada.DataSet1TableAdapters.TableAdapterManager();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.UsuariosNavigator)).BeginInit();
-            this.UsuariosNavigator.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingNavigator)).BeginInit();
+            this.usuariosBindingNavigator.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.fotoPictureBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.UsuariosbindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -125,20 +129,21 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.UsuariosNavigator);
+            this.groupBox1.Controls.Add(this.usuariosBindingNavigator);
             this.groupBox1.Controls.Add(this.groupBox2);
-            this.groupBox1.Location = new System.Drawing.Point(32, 62);
+            this.groupBox1.Location = new System.Drawing.Point(35, 68);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(882, 354);
+            this.groupBox1.Size = new System.Drawing.Size(879, 348);
             this.groupBox1.TabIndex = 9;
             this.groupBox1.TabStop = false;
             // 
-            // UsuariosNavigator
+            // usuariosBindingNavigator
             // 
-            this.UsuariosNavigator.AddNewItem = null;
-            this.UsuariosNavigator.CountItem = this.bindingNavigatorCountItem;
-            this.UsuariosNavigator.DeleteItem = null;
-            this.UsuariosNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.usuariosBindingNavigator.AddNewItem = null;
+            this.usuariosBindingNavigator.BindingSource = this.usuariosBindingSource;
+            this.usuariosBindingNavigator.CountItem = this.bindingNavigatorCountItem;
+            this.usuariosBindingNavigator.DeleteItem = null;
+            this.usuariosBindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.MoveFirstItem,
             this.MovePreviousItem,
             this.bindingNavigatorSeparator,
@@ -158,16 +163,26 @@
             this.toolStripSeparator2,
             this.BBuscar,
             this.BTodosRegistros});
-            this.UsuariosNavigator.Location = new System.Drawing.Point(3, 16);
-            this.UsuariosNavigator.MoveFirstItem = this.MoveFirstItem;
-            this.UsuariosNavigator.MoveLastItem = this.MoveLastItem;
-            this.UsuariosNavigator.MoveNextItem = this.MoveNextItem;
-            this.UsuariosNavigator.MovePreviousItem = this.MovePreviousItem;
-            this.UsuariosNavigator.Name = "UsuariosNavigator";
-            this.UsuariosNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.UsuariosNavigator.Size = new System.Drawing.Size(876, 25);
-            this.UsuariosNavigator.TabIndex = 11;
-            this.UsuariosNavigator.Text = "bindingNavigator1";
+            this.usuariosBindingNavigator.Location = new System.Drawing.Point(3, 16);
+            this.usuariosBindingNavigator.MoveFirstItem = this.MoveFirstItem;
+            this.usuariosBindingNavigator.MoveLastItem = this.MoveLastItem;
+            this.usuariosBindingNavigator.MoveNextItem = this.MoveNextItem;
+            this.usuariosBindingNavigator.MovePreviousItem = this.MovePreviousItem;
+            this.usuariosBindingNavigator.Name = "usuariosBindingNavigator";
+            this.usuariosBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
+            this.usuariosBindingNavigator.Size = new System.Drawing.Size(873, 25);
+            this.usuariosBindingNavigator.TabIndex = 11;
+            this.usuariosBindingNavigator.Text = "bindingNavigator1";
+            // 
+            // usuariosBindingSource
+            // 
+            this.usuariosBindingSource.DataMember = "Usuarios";
+            this.usuariosBindingSource.DataSource = this.dataSet1;
+            // 
+            // dataSet1
+            // 
+            this.dataSet1.DataSetName = "DataSet1";
+            this.dataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // bindingNavigatorCountItem
             // 
@@ -245,51 +260,51 @@
             this.BNuevo.Name = "BNuevo";
             this.BNuevo.Size = new System.Drawing.Size(23, 22);
             this.BNuevo.Text = "toolStripButton1";
-            this.BNuevo.ToolTipText = "Crear Registro";
+            this.BNuevo.ToolTipText = "Nuevo";
             this.BNuevo.Click += new System.EventHandler(this.BNuevo_Click);
             // 
             // BGuardar
             // 
             this.BGuardar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.BGuardar.Enabled = false;
             this.BGuardar.Image = ((System.Drawing.Image)(resources.GetObject("BGuardar.Image")));
             this.BGuardar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.BGuardar.Name = "BGuardar";
             this.BGuardar.Size = new System.Drawing.Size(23, 22);
-            this.BGuardar.Text = "Guardar Registro";
+            this.BGuardar.Text = "toolStripButton2";
+            this.BGuardar.ToolTipText = "Guardar";
             this.BGuardar.Click += new System.EventHandler(this.BGuardar_Click);
             // 
             // BCancelar
             // 
             this.BCancelar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.BCancelar.Enabled = false;
             this.BCancelar.Image = ((System.Drawing.Image)(resources.GetObject("BCancelar.Image")));
             this.BCancelar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.BCancelar.Name = "BCancelar";
             this.BCancelar.Size = new System.Drawing.Size(23, 22);
-            this.BCancelar.Text = "Cancelar Registro";
+            this.BCancelar.Text = "toolStripButton3";
+            this.BCancelar.ToolTipText = "Cancelar";
             this.BCancelar.Click += new System.EventHandler(this.BCancelar_Click);
             // 
             // BEliminar
             // 
             this.BEliminar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.BEliminar.Enabled = false;
             this.BEliminar.Image = ((System.Drawing.Image)(resources.GetObject("BEliminar.Image")));
             this.BEliminar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.BEliminar.Name = "BEliminar";
             this.BEliminar.Size = new System.Drawing.Size(23, 22);
-            this.BEliminar.Text = "Eliminar Registro";
+            this.BEliminar.Text = "toolStripButton4";
+            this.BEliminar.ToolTipText = "Eliminar";
             this.BEliminar.Click += new System.EventHandler(this.BEliminar_Click);
             // 
             // BEditar
             // 
             this.BEditar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.BEditar.Enabled = false;
             this.BEditar.Image = ((System.Drawing.Image)(resources.GetObject("BEditar.Image")));
             this.BEditar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.BEditar.Name = "BEditar";
             this.BEditar.Size = new System.Drawing.Size(23, 22);
-            this.BEditar.Text = "Editar Registro";
+            this.BEditar.Text = "toolStripButton5";
+            this.BEditar.ToolTipText = "Editar";
             this.BEditar.Click += new System.EventHandler(this.BEditar_Click);
             // 
             // toolStripSeparator1
@@ -299,7 +314,6 @@
             // 
             // Buscar
             // 
-            this.Buscar.Enabled = false;
             this.Buscar.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.Buscar.Name = "Buscar";
             this.Buscar.Size = new System.Drawing.Size(100, 25);
@@ -312,23 +326,23 @@
             // BBuscar
             // 
             this.BBuscar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.BBuscar.Enabled = false;
             this.BBuscar.Image = ((System.Drawing.Image)(resources.GetObject("BBuscar.Image")));
             this.BBuscar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.BBuscar.Name = "BBuscar";
             this.BBuscar.Size = new System.Drawing.Size(23, 22);
-            this.BBuscar.Text = "Buscar Registro";
+            this.BBuscar.Text = "toolStripButton6";
+            this.BBuscar.ToolTipText = "Buscar";
             this.BBuscar.Click += new System.EventHandler(this.BBuscar_Click);
             // 
             // BTodosRegistros
             // 
             this.BTodosRegistros.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.BTodosRegistros.Enabled = false;
             this.BTodosRegistros.Image = ((System.Drawing.Image)(resources.GetObject("BTodosRegistros.Image")));
             this.BTodosRegistros.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.BTodosRegistros.Name = "BTodosRegistros";
             this.BTodosRegistros.Size = new System.Drawing.Size(23, 22);
-            this.BTodosRegistros.Text = "Ver Todos los Registros";
+            this.BTodosRegistros.Text = "toolStripButton7";
+            this.BTodosRegistros.ToolTipText = "Todos";
             this.BTodosRegistros.Click += new System.EventHandler(this.BTodosRegistros_Click);
             // 
             // groupBox2
@@ -522,6 +536,18 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
+            // usuariosTableAdapter
+            // 
+            this.usuariosTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.PersonasTableAdapter = null;
+            this.tableAdapterManager.RegistrosTableAdapter = null;
+            this.tableAdapterManager.UpdateOrder = ControlEntrada.DataSet1TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.tableAdapterManager.UsuariosTableAdapter = this.usuariosTableAdapter;
+            // 
             // ModuloUsuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -543,15 +569,16 @@
             this.panel1.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.UsuariosNavigator)).EndInit();
-            this.UsuariosNavigator.ResumeLayout(false);
-            this.UsuariosNavigator.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingNavigator)).EndInit();
+            this.usuariosBindingNavigator.ResumeLayout(false);
+            this.usuariosBindingNavigator.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.fotoPictureBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.UsuariosbindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -561,12 +588,6 @@
         private System.Windows.Forms.Label labelMenu;
         private System.Windows.Forms.Button cerrar;
         private System.Windows.Forms.ToolTip toolTip1;
-        private System.Windows.Forms.BindingNavigator UsuariosNavigator;
-        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator;
-        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator1;
-        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.Label labelContraseña;
         private System.Windows.Forms.Label labelIDUsuario;
         private System.Windows.Forms.Label labelRol;
@@ -576,22 +597,8 @@
         private System.Windows.Forms.Label labelDocumento;
         private System.Windows.Forms.Button BEliminarFoto;
         private System.Windows.Forms.Button BFoto;
-        public System.Windows.Forms.ToolStripButton MoveFirstItem;
-        public System.Windows.Forms.ToolStripButton MovePreviousItem;
-        public System.Windows.Forms.ToolStripButton MoveNextItem;
-        public System.Windows.Forms.ToolStripButton MoveLastItem;
-        public System.Windows.Forms.ToolStripButton BNuevo;
-        public System.Windows.Forms.ToolStripButton BGuardar;
-        public System.Windows.Forms.ToolStripButton BCancelar;
-        public System.Windows.Forms.ToolStripButton BEliminar;
-        public System.Windows.Forms.ToolStripButton BEditar;
-        public System.Windows.Forms.ToolStripTextBox Buscar;
-        public System.Windows.Forms.ToolStripButton BBuscar;
-        public System.Windows.Forms.ToolStripButton BTodosRegistros;
-        public System.Windows.Forms.ToolStripTextBox bindingNavigatorPositionItem;
         public System.Windows.Forms.GroupBox groupBox1;
         public System.Windows.Forms.GroupBox groupBox2;
-        public System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem;
         public System.Windows.Forms.PictureBox fotoPictureBox;
         public System.Windows.Forms.ComboBox rolComboBox;
         public System.Windows.Forms.TextBox contrasenaTextEdit;
@@ -600,8 +607,31 @@
         public System.Windows.Forms.TextBox nombreTextEdit;
         public System.Windows.Forms.TextBox cedulaTextBox;
         public System.Windows.Forms.TextBox id_UsuarioTextBox;
-        public System.Windows.Forms.BindingSource UsuariosbindingSource;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.Panel panel2;
+        private DataSet1 dataSet1;
+        private DataSet1TableAdapters.UsuariosTableAdapter usuariosTableAdapter;
+        private DataSet1TableAdapters.TableAdapterManager tableAdapterManager;
+        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator;
+        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator1;
+        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
+        public System.Windows.Forms.ToolStripButton MoveFirstItem;
+        public System.Windows.Forms.ToolStripButton MovePreviousItem;
+        public System.Windows.Forms.ToolStripButton MoveNextItem;
+        public System.Windows.Forms.ToolStripButton MoveLastItem;
+        public System.Windows.Forms.BindingNavigator usuariosBindingNavigator;
+        public System.Windows.Forms.ToolStripButton BNuevo;
+        public System.Windows.Forms.ToolStripButton BGuardar;
+        public System.Windows.Forms.ToolStripButton BCancelar;
+        public System.Windows.Forms.ToolStripButton BEliminar;
+        public System.Windows.Forms.ToolStripButton BEditar;
+        public System.Windows.Forms.ToolStripButton BBuscar;
+        public System.Windows.Forms.ToolStripButton BTodosRegistros;
+        public System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem;
+        public System.Windows.Forms.ToolStripTextBox bindingNavigatorPositionItem;
+        public System.Windows.Forms.ToolStripTextBox Buscar;
+        public System.Windows.Forms.BindingSource usuariosBindingSource;
     }
 }

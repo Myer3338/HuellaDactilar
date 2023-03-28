@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.Registro = new System.Windows.Forms.Label();
             this.version = new System.Windows.Forms.Label();
             this.usuarioLogin = new System.Windows.Forms.Label();
@@ -37,7 +38,13 @@
             this.entrarLogin = new System.Windows.Forms.Button();
             this.salirLogin = new System.Windows.Forms.Button();
             this.contenedorLogin = new System.Windows.Forms.GroupBox();
+            this.dataSet1 = new ControlEntrada.DataSet1();
+            this.usuariosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.usuariosTableAdapter = new ControlEntrada.DataSet1TableAdapters.UsuariosTableAdapter();
+            this.tableAdapterManager = new ControlEntrada.DataSet1TableAdapters.TableAdapterManager();
             this.contenedorLogin.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // Registro
@@ -95,6 +102,7 @@
             // 
             this.tbContraseñaLogin.Location = new System.Drawing.Point(22, 148);
             this.tbContraseñaLogin.Name = "tbContraseñaLogin";
+            this.tbContraseñaLogin.PasswordChar = '*';
             this.tbContraseñaLogin.Size = new System.Drawing.Size(174, 20);
             this.tbContraseñaLogin.TabIndex = 5;
             // 
@@ -140,12 +148,34 @@
             this.contenedorLogin.TabIndex = 8;
             this.contenedorLogin.TabStop = false;
             // 
+            // dataSet1
+            // 
+            this.dataSet1.DataSetName = "DataSet1";
+            this.dataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // usuariosBindingSource
+            // 
+            this.usuariosBindingSource.DataMember = "Usuarios";
+            this.usuariosBindingSource.DataSource = this.dataSet1;
+            // 
+            // usuariosTableAdapter
+            // 
+            this.usuariosTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.PersonasTableAdapter = null;
+            this.tableAdapterManager.RegistrosTableAdapter = null;
+            this.tableAdapterManager.UpdateOrder = ControlEntrada.DataSet1TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.tableAdapterManager.UsuariosTableAdapter = this.usuariosTableAdapter;
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(169)))), ((int)(((byte)(0)))));
-            this.ClientSize = new System.Drawing.Size(309, 468);
+            this.ClientSize = new System.Drawing.Size(312, 452);
             this.Controls.Add(this.contenedorLogin);
             this.Controls.Add(this.salirLogin);
             this.Controls.Add(this.entrarLogin);
@@ -159,8 +189,11 @@
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
+            this.Load += new System.EventHandler(this.Login_Load);
             this.contenedorLogin.ResumeLayout(false);
             this.contenedorLogin.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -171,12 +204,16 @@
         private System.Windows.Forms.Label Registro;
         private System.Windows.Forms.Label version;
         private System.Windows.Forms.Label usuarioLogin;
-        private System.Windows.Forms.TextBox tbUsuarioLogin;
         private System.Windows.Forms.Label ContrasenaLogin;
-        private System.Windows.Forms.TextBox tbContraseñaLogin;
         private System.Windows.Forms.Button entrarLogin;
         private System.Windows.Forms.Button salirLogin;
         private System.Windows.Forms.GroupBox contenedorLogin;
+        private DataSet1 dataSet1;
+        private System.Windows.Forms.BindingSource usuariosBindingSource;
+        private DataSet1TableAdapters.UsuariosTableAdapter usuariosTableAdapter;
+        private DataSet1TableAdapters.TableAdapterManager tableAdapterManager;
+        public System.Windows.Forms.TextBox tbUsuarioLogin;
+        public System.Windows.Forms.TextBox tbContraseñaLogin;
     }
 }
 

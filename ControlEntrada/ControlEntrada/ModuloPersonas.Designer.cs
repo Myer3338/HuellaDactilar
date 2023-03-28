@@ -43,14 +43,11 @@
             this.cerrar = new System.Windows.Forms.Button();
             this.labelMenu = new System.Windows.Forms.Label();
             this.enrollmentControl1 = new DPFP.Gui.Enrollment.EnrollmentControl();
-            this.dataSet1 = new ControlEntrada.DataSet1();
-            this.personasBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.personasTableAdapter = new ControlEntrada.DataSet1TableAdapters.PersonasTableAdapter();
-            this.tableAdapterManager = new ControlEntrada.DataSet1TableAdapters.TableAdapterManager();
             this.personasBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
+            this.personasBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataSet1 = new ControlEntrada.DataSet1();
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
-            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
@@ -59,17 +56,21 @@
             this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.personasBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
+            this.editarPersona = new System.Windows.Forms.ToolStripButton();
+            this.EliminarPersona = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.Buscar = new System.Windows.Forms.ToolStripTextBox();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.Imprimir = new System.Windows.Forms.ToolStripButton();
             this.idPersonaTextBox = new System.Windows.Forms.TextBox();
-            this.fotoPictureBox = new System.Windows.Forms.PictureBox();
             this.cedulaTextBox = new System.Windows.Forms.TextBox();
             this.nombreTextBox = new System.Windows.Forms.TextBox();
             this.primerApellidoTextBox = new System.Windows.Forms.TextBox();
             this.segundoApellidoTextBox = new System.Windows.Forms.TextBox();
             this.fichaTextBox = new System.Windows.Forms.TextBox();
-            this.huellaPictureBox = new System.Windows.Forms.PictureBox();
             this.noDedoTextBox = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.huellaPictureBox = new System.Windows.Forms.PictureBox();
             this.personasDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
@@ -78,13 +79,10 @@
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripTextBox1 = new System.Windows.Forms.ToolStripTextBox();
-            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
+            this.personasTableAdapter = new ControlEntrada.DataSet1TableAdapters.PersonasTableAdapter();
+            this.tableAdapterManager = new ControlEntrada.DataSet1TableAdapters.TableAdapterManager();
+            this.fotoPictureBox = new System.Windows.Forms.PictureBox();
             idPersonaLabel = new System.Windows.Forms.Label();
             fotoLabel = new System.Windows.Forms.Label();
             cedulaLabel = new System.Windows.Forms.Label();
@@ -95,14 +93,14 @@
             huellaLabel = new System.Windows.Forms.Label();
             noDedoLabel = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.personasBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.personasBindingNavigator)).BeginInit();
             this.personasBindingNavigator.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.fotoPictureBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.huellaPictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.personasBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).BeginInit();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.huellaPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.personasDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fotoPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // idPersonaLabel
@@ -232,33 +230,12 @@
             this.enrollmentControl1.Size = new System.Drawing.Size(492, 314);
             this.enrollmentControl1.TabIndex = 11;
             // 
-            // dataSet1
-            // 
-            this.dataSet1.DataSetName = "DataSet1";
-            this.dataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // personasBindingSource
-            // 
-            this.personasBindingSource.DataMember = "Personas";
-            this.personasBindingSource.DataSource = this.dataSet1;
-            // 
-            // personasTableAdapter
-            // 
-            this.personasTableAdapter.ClearBeforeFill = true;
-            // 
-            // tableAdapterManager
-            // 
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.PersonasTableAdapter = this.personasTableAdapter;
-            this.tableAdapterManager.RegistrosTableAdapter = null;
-            this.tableAdapterManager.UpdateOrder = ControlEntrada.DataSet1TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            // 
             // personasBindingNavigator
             // 
             this.personasBindingNavigator.AddNewItem = this.bindingNavigatorAddNewItem;
             this.personasBindingNavigator.BindingSource = this.personasBindingSource;
             this.personasBindingNavigator.CountItem = this.bindingNavigatorCountItem;
-            this.personasBindingNavigator.DeleteItem = this.bindingNavigatorDeleteItem;
+            this.personasBindingNavigator.DeleteItem = null;
             this.personasBindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.bindingNavigatorMoveFirstItem,
             this.bindingNavigatorMovePreviousItem,
@@ -270,13 +247,12 @@
             this.bindingNavigatorMoveLastItem,
             this.bindingNavigatorSeparator2,
             this.bindingNavigatorAddNewItem,
-            this.bindingNavigatorDeleteItem,
-            this.personasBindingNavigatorSaveItem,
+            this.editarPersona,
+            this.EliminarPersona,
             this.toolStripSeparator1,
-            this.toolStripTextBox1,
+            this.Buscar,
             this.toolStripSeparator2,
-            this.toolStripButton1,
-            this.toolStripButton2});
+            this.Imprimir});
             this.personasBindingNavigator.Location = new System.Drawing.Point(0, 39);
             this.personasBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
             this.personasBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
@@ -296,6 +272,17 @@
             this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
             this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorAddNewItem.Text = "Agregar nuevo";
+            this.bindingNavigatorAddNewItem.Click += new System.EventHandler(this.bindingNavigatorAddNewItem_Click);
+            // 
+            // personasBindingSource
+            // 
+            this.personasBindingSource.DataMember = "Personas";
+            this.personasBindingSource.DataSource = this.dataSet1;
+            // 
+            // dataSet1
+            // 
+            this.dataSet1.DataSetName = "DataSet1";
+            this.dataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // bindingNavigatorCountItem
             // 
@@ -303,15 +290,6 @@
             this.bindingNavigatorCountItem.Size = new System.Drawing.Size(37, 22);
             this.bindingNavigatorCountItem.Text = "de {0}";
             this.bindingNavigatorCountItem.ToolTipText = "Número total de elementos";
-            // 
-            // bindingNavigatorDeleteItem
-            // 
-            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
-            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
-            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorDeleteItem.Text = "Eliminar";
             // 
             // bindingNavigatorMoveFirstItem
             // 
@@ -374,14 +352,52 @@
             this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
             this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
             // 
-            // personasBindingNavigatorSaveItem
+            // editarPersona
             // 
-            this.personasBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.personasBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("personasBindingNavigatorSaveItem.Image")));
-            this.personasBindingNavigatorSaveItem.Name = "personasBindingNavigatorSaveItem";
-            this.personasBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 22);
-            this.personasBindingNavigatorSaveItem.Text = "Guardar datos";
-            this.personasBindingNavigatorSaveItem.Click += new System.EventHandler(this.personasBindingNavigatorSaveItem_Click_1);
+            this.editarPersona.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.editarPersona.Image = ((System.Drawing.Image)(resources.GetObject("editarPersona.Image")));
+            this.editarPersona.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.editarPersona.Name = "editarPersona";
+            this.editarPersona.Size = new System.Drawing.Size(23, 22);
+            this.editarPersona.Text = "toolStripButton1";
+            this.editarPersona.ToolTipText = "Editar";
+            this.editarPersona.Click += new System.EventHandler(this.editarPersona_Click);
+            // 
+            // EliminarPersona
+            // 
+            this.EliminarPersona.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.EliminarPersona.Image = ((System.Drawing.Image)(resources.GetObject("EliminarPersona.Image")));
+            this.EliminarPersona.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.EliminarPersona.Name = "EliminarPersona";
+            this.EliminarPersona.Size = new System.Drawing.Size(23, 22);
+            this.EliminarPersona.Text = "toolStripButton2";
+            this.EliminarPersona.ToolTipText = "Eliminar";
+            this.EliminarPersona.Click += new System.EventHandler(this.EliminarPersona_Click);
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
+            // 
+            // Buscar
+            // 
+            this.Buscar.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.Buscar.Name = "Buscar";
+            this.Buscar.Size = new System.Drawing.Size(100, 25);
+            // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 25);
+            // 
+            // Imprimir
+            // 
+            this.Imprimir.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.Imprimir.Image = ((System.Drawing.Image)(resources.GetObject("Imprimir.Image")));
+            this.Imprimir.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.Imprimir.Name = "Imprimir";
+            this.Imprimir.Size = new System.Drawing.Size(23, 22);
+            this.Imprimir.ToolTipText = "Imprimir";
             // 
             // idPersonaTextBox
             // 
@@ -390,15 +406,6 @@
             this.idPersonaTextBox.Name = "idPersonaTextBox";
             this.idPersonaTextBox.Size = new System.Drawing.Size(100, 20);
             this.idPersonaTextBox.TabIndex = 13;
-            // 
-            // fotoPictureBox
-            // 
-            this.fotoPictureBox.DataBindings.Add(new System.Windows.Forms.Binding("Image", this.personasBindingSource, "Foto", true));
-            this.fotoPictureBox.Location = new System.Drawing.Point(531, 134);
-            this.fotoPictureBox.Name = "fotoPictureBox";
-            this.fotoPictureBox.Size = new System.Drawing.Size(204, 194);
-            this.fotoPictureBox.TabIndex = 15;
-            this.fotoPictureBox.TabStop = false;
             // 
             // cedulaTextBox
             // 
@@ -441,15 +448,6 @@
             this.fichaTextBox.Size = new System.Drawing.Size(147, 20);
             this.fichaTextBox.TabIndex = 25;
             // 
-            // huellaPictureBox
-            // 
-            this.huellaPictureBox.DataBindings.Add(new System.Windows.Forms.Binding("Image", this.personasBindingSource, "Huella", true));
-            this.huellaPictureBox.Location = new System.Drawing.Point(113, 52);
-            this.huellaPictureBox.Name = "huellaPictureBox";
-            this.huellaPictureBox.Size = new System.Drawing.Size(100, 50);
-            this.huellaPictureBox.TabIndex = 27;
-            this.huellaPictureBox.TabStop = false;
-            // 
             // noDedoTextBox
             // 
             this.noDedoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.personasBindingSource, "NoDedo", true));
@@ -472,6 +470,15 @@
             this.panel2.Size = new System.Drawing.Size(23, 21);
             this.panel2.TabIndex = 30;
             // 
+            // huellaPictureBox
+            // 
+            this.huellaPictureBox.DataBindings.Add(new System.Windows.Forms.Binding("Image", this.personasBindingSource, "Huella", true));
+            this.huellaPictureBox.Location = new System.Drawing.Point(113, 52);
+            this.huellaPictureBox.Name = "huellaPictureBox";
+            this.huellaPictureBox.Size = new System.Drawing.Size(100, 50);
+            this.huellaPictureBox.TabIndex = 27;
+            this.huellaPictureBox.TabStop = false;
+            // 
             // personasDataGridView
             // 
             this.personasDataGridView.AllowUserToAddRows = false;
@@ -487,7 +494,6 @@
             this.dataGridViewTextBoxColumn4,
             this.dataGridViewTextBoxColumn5,
             this.dataGridViewTextBoxColumn6,
-            this.dataGridViewImageColumn2,
             this.dataGridViewTextBoxColumn7});
             this.personasDataGridView.DataSource = this.personasBindingSource;
             this.personasDataGridView.Location = new System.Drawing.Point(7, 432);
@@ -495,6 +501,7 @@
             this.personasDataGridView.ReadOnly = true;
             this.personasDataGridView.Size = new System.Drawing.Size(783, 118);
             this.personasDataGridView.TabIndex = 30;
+            this.personasDataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.personasDataGridView_CellClick);
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -545,13 +552,6 @@
             this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
             this.dataGridViewTextBoxColumn6.ReadOnly = true;
             // 
-            // dataGridViewImageColumn2
-            // 
-            this.dataGridViewImageColumn2.DataPropertyName = "Huella";
-            this.dataGridViewImageColumn2.HeaderText = "Huella";
-            this.dataGridViewImageColumn2.Name = "dataGridViewImageColumn2";
-            this.dataGridViewImageColumn2.ReadOnly = true;
-            // 
             // dataGridViewTextBoxColumn7
             // 
             this.dataGridViewTextBoxColumn7.DataPropertyName = "NoDedo";
@@ -559,39 +559,27 @@
             this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
             this.dataGridViewTextBoxColumn7.ReadOnly = true;
             // 
-            // toolStripSeparator1
+            // personasTableAdapter
             // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
+            this.personasTableAdapter.ClearBeforeFill = true;
             // 
-            // toolStripTextBox1
+            // tableAdapterManager
             // 
-            this.toolStripTextBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.toolStripTextBox1.Name = "toolStripTextBox1";
-            this.toolStripTextBox1.Size = new System.Drawing.Size(100, 25);
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.PersonasTableAdapter = this.personasTableAdapter;
+            this.tableAdapterManager.RegistrosTableAdapter = null;
+            this.tableAdapterManager.UpdateOrder = ControlEntrada.DataSet1TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.tableAdapterManager.UsuariosTableAdapter = null;
             // 
-            // toolStripSeparator2
+            // fotoPictureBox
             // 
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 25);
-            // 
-            // toolStripButton1
-            // 
-            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
-            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton1.Text = "toolStripButton1";
-            // 
-            // toolStripButton2
-            // 
-            this.toolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton2.Image")));
-            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton2.Name = "toolStripButton2";
-            this.toolStripButton2.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton2.Text = "toolStripButton2";
+            this.fotoPictureBox.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.fotoPictureBox.DataBindings.Add(new System.Windows.Forms.Binding("Image", this.personasBindingSource, "Foto", true));
+            this.fotoPictureBox.Location = new System.Drawing.Point(531, 134);
+            this.fotoPictureBox.Name = "fotoPictureBox";
+            this.fotoPictureBox.Size = new System.Drawing.Size(204, 194);
+            this.fotoPictureBox.TabIndex = 15;
+            this.fotoPictureBox.TabStop = false;
             // 
             // Personal
             // 
@@ -627,16 +615,16 @@
             this.Load += new System.EventHandler(this.Personal_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.personasBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.personasBindingNavigator)).EndInit();
             this.personasBindingNavigator.ResumeLayout(false);
             this.personasBindingNavigator.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.fotoPictureBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.huellaPictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.personasBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.huellaPictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.personasDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fotoPictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -648,12 +636,10 @@
         private System.Windows.Forms.Button cerrar;
         private DataSet1 dataSet1;
         private System.Windows.Forms.BindingSource personasBindingSource;
-        private DataSet1TableAdapters.PersonasTableAdapter personasTableAdapter;
         private DataSet1TableAdapters.TableAdapterManager tableAdapterManager;
         private System.Windows.Forms.BindingNavigator personasBindingNavigator;
         private System.Windows.Forms.ToolStripButton bindingNavigatorAddNewItem;
         private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorDeleteItem;
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveFirstItem;
         private System.Windows.Forms.ToolStripButton bindingNavigatorMovePreviousItem;
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator;
@@ -662,7 +648,6 @@
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveNextItem;
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
-        private System.Windows.Forms.ToolStripButton personasBindingNavigatorSaveItem;
         private System.Windows.Forms.TextBox idPersonaTextBox;
         private System.Windows.Forms.PictureBox fotoPictureBox;
         private System.Windows.Forms.TextBox cedulaTextBox;
@@ -673,6 +658,13 @@
         private System.Windows.Forms.PictureBox huellaPictureBox;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.DataGridView personasDataGridView;
+        public System.Windows.Forms.TextBox noDedoTextBox;
+        public DPFP.Gui.Enrollment.EnrollmentControl enrollmentControl1;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.ToolStripTextBox Buscar;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
+        private System.Windows.Forms.ToolStripButton editarPersona;
+        private System.Windows.Forms.ToolStripButton EliminarPersona;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
@@ -680,14 +672,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
-        private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
-        public System.Windows.Forms.TextBox noDedoTextBox;
-        public DPFP.Gui.Enrollment.EnrollmentControl enrollmentControl1;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
-        private System.Windows.Forms.ToolStripTextBox toolStripTextBox1;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
-        private System.Windows.Forms.ToolStripButton toolStripButton1;
-        private System.Windows.Forms.ToolStripButton toolStripButton2;
+        private System.Windows.Forms.ToolStripButton Imprimir;
+        public DataSet1TableAdapters.PersonasTableAdapter personasTableAdapter;
     }
 }

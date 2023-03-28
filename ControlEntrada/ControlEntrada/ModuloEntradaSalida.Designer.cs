@@ -43,6 +43,10 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.cerrar = new System.Windows.Forms.Button();
             this.groupBox = new System.Windows.Forms.GroupBox();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.idRegistroEntrada = new System.Windows.Forms.Label();
+            this.registrosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataSet1 = new ControlEntrada.DataSet1();
             this.verificationControl1 = new DPFP.Gui.Verification.VerificationControl();
             this.Resultado = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -50,6 +54,7 @@
             this.verificacion = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.idPersonaTextBox = new System.Windows.Forms.TextBox();
+            this.personasBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.noDedoTextBox = new System.Windows.Forms.TextBox();
             this.huellaPictureBox = new System.Windows.Forms.PictureBox();
             this.fotoPictureBox = new System.Windows.Forms.PictureBox();
@@ -58,10 +63,9 @@
             this.primerApellidoTextBox = new System.Windows.Forms.TextBox();
             this.segundoApellidoTextBox = new System.Windows.Forms.TextBox();
             this.fichaTextBox = new System.Windows.Forms.TextBox();
-            this.personasBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dataSet1 = new ControlEntrada.DataSet1();
             this.personasTableAdapter = new ControlEntrada.DataSet1TableAdapters.PersonasTableAdapter();
             this.tableAdapterManager = new ControlEntrada.DataSet1TableAdapters.TableAdapterManager();
+            this.registrosTableAdapter = new ControlEntrada.DataSet1TableAdapters.RegistrosTableAdapter();
             idPersonaLabel = new System.Windows.Forms.Label();
             fotoLabel = new System.Windows.Forms.Label();
             cedulaLabel = new System.Windows.Forms.Label();
@@ -73,11 +77,13 @@
             noDedoLabel = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.groupBox.SuspendLayout();
+            this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.registrosBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).BeginInit();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.personasBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.huellaPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fotoPictureBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.personasBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).BeginInit();
             this.SuspendLayout();
             // 
             // idPersonaLabel
@@ -180,7 +186,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(732, 39);
+            this.panel1.Size = new System.Drawing.Size(702, 39);
             this.panel1.TabIndex = 1;
             // 
             // cerrar
@@ -198,6 +204,7 @@
             // 
             // groupBox
             // 
+            this.groupBox.Controls.Add(this.panel3);
             this.groupBox.Controls.Add(this.verificationControl1);
             this.groupBox.Controls.Add(this.Resultado);
             this.groupBox.Controls.Add(this.label3);
@@ -216,11 +223,39 @@
             this.groupBox.Controls.Add(this.segundoApellidoTextBox);
             this.groupBox.Controls.Add(fichaLabel);
             this.groupBox.Controls.Add(this.fichaTextBox);
-            this.groupBox.Location = new System.Drawing.Point(34, 58);
+            this.groupBox.Location = new System.Drawing.Point(16, 57);
             this.groupBox.Name = "groupBox";
-            this.groupBox.Size = new System.Drawing.Size(668, 402);
+            this.groupBox.Size = new System.Drawing.Size(668, 427);
             this.groupBox.TabIndex = 2;
             this.groupBox.TabStop = false;
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.idRegistroEntrada);
+            this.panel3.Location = new System.Drawing.Point(390, 210);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(10, 10);
+            this.panel3.TabIndex = 25;
+            // 
+            // idRegistroEntrada
+            // 
+            this.idRegistroEntrada.AutoSize = true;
+            this.idRegistroEntrada.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.registrosBindingSource, "Id_Entrada", true));
+            this.idRegistroEntrada.Location = new System.Drawing.Point(12, 12);
+            this.idRegistroEntrada.Name = "idRegistroEntrada";
+            this.idRegistroEntrada.Size = new System.Drawing.Size(91, 13);
+            this.idRegistroEntrada.TabIndex = 24;
+            this.idRegistroEntrada.Text = "idRegistroEntrada";
+            // 
+            // registrosBindingSource
+            // 
+            this.registrosBindingSource.DataMember = "Registros";
+            this.registrosBindingSource.DataSource = this.dataSet1;
+            // 
+            // dataSet1
+            // 
+            this.dataSet1.DataSetName = "DataSet1";
+            this.dataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // verificationControl1
             // 
@@ -244,18 +279,22 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(51, 342);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Red;
+            this.label3.Location = new System.Drawing.Point(51, 309);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(35, 13);
+            this.label3.Size = new System.Drawing.Size(92, 31);
             this.label3.TabIndex = 21;
             this.label3.Text = "label3";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(51, 268);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Red;
+            this.label2.Location = new System.Drawing.Point(51, 235);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(35, 13);
+            this.label2.Size = new System.Drawing.Size(92, 31);
             this.label2.TabIndex = 20;
             this.label2.Text = "label2";
             // 
@@ -290,6 +329,11 @@
             this.idPersonaTextBox.Size = new System.Drawing.Size(100, 20);
             this.idPersonaTextBox.TabIndex = 1;
             // 
+            // personasBindingSource
+            // 
+            this.personasBindingSource.DataMember = "Personas";
+            this.personasBindingSource.DataSource = this.dataSet1;
+            // 
             // noDedoTextBox
             // 
             this.noDedoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.personasBindingSource, "NoDedo", true));
@@ -309,6 +353,7 @@
             // 
             // fotoPictureBox
             // 
+            this.fotoPictureBox.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.fotoPictureBox.DataBindings.Add(new System.Windows.Forms.Binding("Image", this.personasBindingSource, "Foto", true));
             this.fotoPictureBox.Location = new System.Drawing.Point(39, 35);
             this.fotoPictureBox.Name = "fotoPictureBox";
@@ -356,16 +401,6 @@
             this.fichaTextBox.Size = new System.Drawing.Size(157, 20);
             this.fichaTextBox.TabIndex = 13;
             // 
-            // personasBindingSource
-            // 
-            this.personasBindingSource.DataMember = "Personas";
-            this.personasBindingSource.DataSource = this.dataSet1;
-            // 
-            // dataSet1
-            // 
-            this.dataSet1.DataSetName = "DataSet1";
-            this.dataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // personasTableAdapter
             // 
             this.personasTableAdapter.ClearBeforeFill = true;
@@ -376,13 +411,18 @@
             this.tableAdapterManager.PersonasTableAdapter = this.personasTableAdapter;
             this.tableAdapterManager.RegistrosTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = ControlEntrada.DataSet1TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.tableAdapterManager.UsuariosTableAdapter = null;
+            // 
+            // registrosTableAdapter
+            // 
+            this.registrosTableAdapter.ClearBeforeFill = true;
             // 
             // ModuloEntradaSalida
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(732, 486);
+            this.ClientSize = new System.Drawing.Size(702, 498);
             this.Controls.Add(this.groupBox);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -398,12 +438,15 @@
             this.panel1.PerformLayout();
             this.groupBox.ResumeLayout(false);
             this.groupBox.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.registrosBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.personasBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.huellaPictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fotoPictureBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.personasBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -433,5 +476,9 @@
         private System.Windows.Forms.TextBox fichaTextBox;
         private DPFP.Gui.Verification.VerificationControl verificationControl1;
         public System.Windows.Forms.TextBox Resultado;
+        private System.Windows.Forms.BindingSource registrosBindingSource;
+        private DataSet1TableAdapters.RegistrosTableAdapter registrosTableAdapter;
+        private System.Windows.Forms.Label idRegistroEntrada;
+        private System.Windows.Forms.Panel panel3;
     }
 }

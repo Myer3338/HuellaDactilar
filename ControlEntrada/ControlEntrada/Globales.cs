@@ -14,7 +14,7 @@ namespace ControlEntrada
     {
         #region Varable
         public static int TipoCrud;
-        public static string Ced;
+        public static string Ced =  string.Empty;
         public static int PosicionRegistro;
 
         //
@@ -36,7 +36,7 @@ namespace ControlEntrada
             if (Convert.ToInt32(General.cadena)>0)
             {
                 General.BuscarRegistros("Select * From Usuarios");
-                //LeerRegistrosUsuarios(u);
+                LeerRegistrosUsuarios(u);
                 u.groupBox2.Enabled = false;
                 u.MovePreviousItem.Enabled = true;
                 u.MoveFirstItem.Enabled = true;
@@ -142,7 +142,7 @@ namespace ControlEntrada
                 u.contrasenaTextEdit.Text = General.temporal.Rows[i]["Contrasena"].ToString();
                 u.rolComboBox.Text = General.temporal.Rows[i]["Rol"].ToString();
             }
-            u.UsuariosbindingSource.DataSource = General.temporal;
+            u.usuariosBindingSource.DataSource = General.temporal;
         }
         #endregion
 
@@ -274,6 +274,10 @@ namespace ControlEntrada
             }
         }
 
+        #endregion
+
+        #region Personas
+        
         #endregion
     }
 }

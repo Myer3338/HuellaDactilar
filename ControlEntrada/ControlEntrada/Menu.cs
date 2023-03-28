@@ -15,6 +15,14 @@ namespace ControlEntrada
         public Menu()
         {
             InitializeComponent();
+            if (Globales.rol_usuario == "Administrador")
+            {
+                this.mostrarRol.Text = Globales.rol_usuario;
+            }
+            else
+            {
+                this.mostrarRol.Visible= false;
+            }
         }
 
         private void cerrar_Click(object sender, EventArgs e)
@@ -71,6 +79,21 @@ namespace ControlEntrada
             if (e.Alt && e.KeyCode == Keys.F4)
             {
                 e.Handled = true;
+            }
+        }
+
+        private void BtnCerrarSesion_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("¿Cerrar Sesión?", "Información", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                foreach (Form frm in Application.OpenForms.Cast<Form>().ToList())
+                {
+                    frm.Close();
+                }
+                System.Diagnostics.Process.Start(Application.ExecutablePath);
+                //Login login = new Login();
+                //login.ShowDialog();
+                //this.Close();
             }
         }
     }
